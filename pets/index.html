@@ -1,0 +1,2317 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Google Analytics GA4 トラッキングコード -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-LPQZLGFJVX"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-LPQZLGFJVX');
+  </script>
+
+  <!-- SEO/AEO メタ情報 -->
+  <title>Green Beans Coffee | 愛犬と一緒に過ごせる北参道・千駄ヶ谷の都会派ペットフレンドリーカフェ</title>
+  <meta name="description" content="北参道駅徒歩3分、愛犬と店内で過ごせる都会派ペットフレンドリーカフェ。店内同伴OK、犬用水提供、チェキ撮影サービスあり。ペット撮影会も開催。GBCペットアンバサダーAyakaが魅力を紹介します。">
+  <meta name="keywords" content="ペット同伴カフェ, 犬連れカフェ 東京, ドッグフレンドリーカフェ, 北参道 ペットOK, 千駄ヶ谷 犬カフェ, グリーンビーンズコーヒー ペット, ダガヤサンドウ 犬, わんこと一緒 カフェ, ペットフレンドリー 渋谷区">
+
+  <!-- OGP -->
+  <meta property="og:title" content="Green Beans Coffee | 愛犬と一緒に店内で過ごせる北参道・千駄ヶ谷の都会派ペットフレンドリーカフェ">
+  <meta property="og:description" content="北参道駅徒歩3分、愛犬と店内で過ごせる都会派ペットフレンドリーカフェ。店内同伴OK、犬用水提供、チェキ撮影サービスあり。">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://greenbeanscoffeeambassador.com/pets/">
+  <meta property="og:image" content="https://greenbeanscoffeeambassador.com/pets/assets/images/hero/og-image.jpg">
+
+  <!-- Canonical -->
+  <link rel="canonical" href="index.html">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="favicon.png">
+
+  <!-- CDN: Tailwind CSS v4 -->
+  <script src="https://cdn.tailwindcss.com?plugins=forms,typography,aspect-ratio"></script>
+
+  <!-- CDN: Animate.css v4.1.1 -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+
+  <!-- CDN: AOS v2.3.4 -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700&family=Noto+Serif+JP:wght@400;600&display=swap" rel="stylesheet">
+
+  <!-- Custom Styles -->
+  <style>
+    body {
+      font-family: 'Noto Sans JP', sans-serif;
+    }
+
+    h1, h2, h3 {
+      font-family: 'Noto Serif JP', serif;
+    }
+
+    /* Smooth scroll */
+    html {
+      scroll-behavior: smooth;
+      overflow-x: hidden;
+    }
+
+    /* Hero image 1 - responsive object position */
+    #hero-bg-1 {
+      object-position: center 70%;
+    }
+
+    /* Hero image 2 - responsive object position */
+    #hero-bg-2 {
+      object-position: center 60%;
+    }
+
+    @media (max-width: 768px) {
+      #hero-bg-2 {
+        object-fit: contain !important;
+        object-position: center center !important;
+        background-color: #2D2A26;
+      }
+    }
+
+    /* ===== Playful Edition Styles ===== */
+
+    /* Floating Paw Animation */
+    .floating-paw {
+      position: fixed;
+      pointer-events: none;
+      opacity: 0.08;
+      z-index: 1;
+      animation: float-paw 20s ease-in-out infinite;
+    }
+    .floating-paw:nth-child(1) { top: 15%; left: 5%; animation-delay: 0s; animation-duration: 25s; }
+    .floating-paw:nth-child(2) { top: 40%; right: 8%; animation-delay: -5s; animation-duration: 22s; }
+    .floating-paw:nth-child(3) { top: 70%; left: 10%; animation-delay: -10s; animation-duration: 28s; }
+    .floating-paw:nth-child(4) { top: 25%; right: 15%; animation-delay: -15s; animation-duration: 24s; }
+    .floating-paw:nth-child(5) { top: 85%; right: 5%; animation-delay: -8s; animation-duration: 26s; }
+
+    @keyframes float-paw {
+      0%, 100% { transform: translateY(0) rotate(0deg) scale(1); }
+      25% { transform: translateY(-20px) rotate(10deg) scale(1.05); }
+      50% { transform: translateY(-10px) rotate(-5deg) scale(0.95); }
+      75% { transform: translateY(-25px) rotate(5deg) scale(1.02); }
+    }
+
+    /* Wave Divider */
+    .wave-divider {
+      width: 100%;
+      height: 80px; /* モバイル: 高さを増やす */
+      overflow: hidden;
+      position: relative;
+      z-index: 10;
+    }
+
+    /* タブレット（iPad Pro）: さらに高さを増やす */
+    @media (min-width: 768px) and (max-width: 1366px) {
+      .wave-divider {
+        height: 100px;
+      }
+    }
+
+    /* デスクトップ: 元の高さに戻す */
+    @media (min-width: 1367px) {
+      .wave-divider {
+        height: 60px;
+      }
+    }
+
+    .wave-divider svg {
+      position: absolute;
+      bottom: -2px; /* 継ぎ目を確実に隠す */
+      width: 100%;
+      height: calc(100% + 4px); /* 上下に余裕を持たせる */
+      display: block;
+    }
+
+    /* 問題の2箇所専用: モバイルでSVGに余裕を持たせる */
+    @media (max-width: 767px) {
+      .wave-problematic svg {
+        width: 110%; /* 幅を10%広げる */
+        left: -5%; /* 中央に配置 */
+        height: calc(100% + 20px); /* 高さも増やす */
+        top: -5px; /* 上部にも余裕を持たせる */
+        bottom: -5px; /* 下部にも余裕を持たせる */
+      }
+    }
+
+    /* スマホサイズ専用: さらに調整 */
+    @media (max-width: 480px) {
+      .wave-divider {
+        height: 100px; /* スマホでは高さをさらに増やす */
+      }
+      .wave-problematic svg {
+        width: 120%; /* 幅を20%広げる */
+        left: -10%; /* 中央に配置 */
+        height: calc(100% + 40px); /* 高さを大幅に増やす */
+        top: -10px; /* 上部にも余裕を持たせる */
+        bottom: -10px; /* 下部にも余裕を持たせる */
+      }
+    }
+
+    /* Hero wave special positioning */
+    .wave-divider-hero {
+      margin-top: 0;
+      position: relative;
+      z-index: 20;
+    }
+
+    /* Desktop: move wave below the fold */
+    @media (min-width: 768px) {
+      .wave-divider-hero {
+        margin-top: 0;
+      }
+    }
+
+    /* Card Hover Effect */
+    .playful-card {
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      border-radius: 1.5rem !important;
+    }
+    .playful-card:hover {
+      transform: translateY(-8px) scale(1.02);
+      box-shadow: 0 20px 40px rgba(74, 55, 40, 0.15);
+    }
+
+    /* Paw Icon for Section Titles */
+    .section-title-with-paw {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.75rem;
+    }
+    .section-title-with-paw::before {
+      content: '';
+      display: inline-block;
+      width: 32px;
+      height: 32px;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%23C9A86C'%3E%3Cpath d='M8.35 3c-.44 0-.84.17-1.15.47-.3.31-.5.69-.5 1.11 0 .94.77 1.67 1.68 1.67.43 0 .83-.17 1.14-.47.3-.31.5-.69.5-1.11C10 3.73 9.24 3 8.35 3m7.3 0c-.44 0-.84.17-1.15.47-.3.31-.5.69-.5 1.11 0 .94.77 1.67 1.68 1.67.43 0 .83-.17 1.14-.47.3-.31.5-.69.5-1.11C17.32 3.73 16.56 3 15.65 3M5 6.5c-.66 0-1.27.26-1.73.7-.45.46-.72 1.07-.72 1.72C2.55 10.01 3.53 11 4.67 11c.65 0 1.26-.26 1.72-.7.45-.46.72-1.07.72-1.72C7.11 7.5 6.13 6.5 5 6.5m14 0c-.66 0-1.27.26-1.73.7-.45.46-.72 1.07-.72 1.72 0 1.09.98 2.08 2.12 2.08.65 0 1.26-.26 1.72-.7.45-.46.72-1.07.72-1.72 0-1.08-.98-2.08-2.11-2.08m-7 3c-2.35 0-4.23 1.88-4.53 4.26-.06.53.27.98.8.98h7.46c.53 0 .86-.45.8-.98C16.23 11.38 14.35 9.5 12 9.5m0 2.5c1.12 0 2.07.74 2.39 1.75H9.61c.32-1.01 1.27-1.75 2.39-1.75'/%3E%3C/svg%3E");
+      background-size: contain;
+      background-repeat: no-repeat;
+    }
+
+    /* Rounded Buttons */
+    .playful-btn {
+      border-radius: 9999px;
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+    .playful-btn:hover {
+      transform: scale(1.05);
+      box-shadow: 0 8px 20px rgba(74, 55, 40, 0.2);
+    }
+
+    /* Softer shadows overall */
+    .playful-shadow {
+      box-shadow: 0 10px 30px rgba(74, 55, 40, 0.1);
+    }
+
+    /* Accent border for special elements */
+    .accent-border {
+      border: 3px solid #C9A86C;
+      border-radius: 1.5rem;
+    }
+  </style>
+
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            primary: '#4A3728',
+            secondary: '#8B7355',
+            accent: '#C9A86C',
+            background: '#FAF8F5',
+            text: '#2D2A26',
+          }
+        }
+      }
+    }
+  </script>
+</head>
+
+<body class="bg-background text-text overflow-x-hidden">
+  <!-- Floating Paw Decorations -->
+  <svg class="floating-paw" width="60" height="60" viewBox="0 0 24 24" fill="#8B7355">
+    <path d="M8.35 3c-.44 0-.84.17-1.15.47-.3.31-.5.69-.5 1.11 0 .94.77 1.67 1.68 1.67.43 0 .83-.17 1.14-.47.3-.31.5-.69.5-1.11C10 3.73 9.24 3 8.35 3m7.3 0c-.44 0-.84.17-1.15.47-.3.31-.5.69-.5 1.11 0 .94.77 1.67 1.68 1.67.43 0 .83-.17 1.14-.47.3-.31.5-.69.5-1.11C17.32 3.73 16.56 3 15.65 3M5 6.5c-.66 0-1.27.26-1.73.7-.45.46-.72 1.07-.72 1.72C2.55 10.01 3.53 11 4.67 11c.65 0 1.26-.26 1.72-.7.45-.46.72-1.07.72-1.72C7.11 7.5 6.13 6.5 5 6.5m14 0c-.66 0-1.27.26-1.73.7-.45.46-.72 1.07-.72 1.72 0 1.09.98 2.08 2.12 2.08.65 0 1.26-.26 1.72-.7.45-.46.72-1.07.72-1.72 0-1.08-.98-2.08-2.11-2.08m-7 3c-2.35 0-4.23 1.88-4.53 4.26-.06.53.27.98.8.98h7.46c.53 0 .86-.45.8-.98C16.23 11.38 14.35 9.5 12 9.5"/>
+  </svg>
+  <svg class="floating-paw" width="45" height="45" viewBox="0 0 24 24" fill="#C9A86C">
+    <path d="M8.35 3c-.44 0-.84.17-1.15.47-.3.31-.5.69-.5 1.11 0 .94.77 1.67 1.68 1.67.43 0 .83-.17 1.14-.47.3-.31.5-.69.5-1.11C10 3.73 9.24 3 8.35 3m7.3 0c-.44 0-.84.17-1.15.47-.3.31-.5.69-.5 1.11 0 .94.77 1.67 1.68 1.67.43 0 .83-.17 1.14-.47.3-.31.5-.69.5-1.11C17.32 3.73 16.56 3 15.65 3M5 6.5c-.66 0-1.27.26-1.73.7-.45.46-.72 1.07-.72 1.72C2.55 10.01 3.53 11 4.67 11c.65 0 1.26-.26 1.72-.7.45-.46.72-1.07.72-1.72C7.11 7.5 6.13 6.5 5 6.5m14 0c-.66 0-1.27.26-1.73.7-.45.46-.72 1.07-.72 1.72 0 1.09.98 2.08 2.12 2.08.65 0 1.26-.26 1.72-.7.45-.46.72-1.07.72-1.72 0-1.08-.98-2.08-2.11-2.08m-7 3c-2.35 0-4.23 1.88-4.53 4.26-.06.53.27.98.8.98h7.46c.53 0 .86-.45.8-.98C16.23 11.38 14.35 9.5 12 9.5"/>
+  </svg>
+  <svg class="floating-paw" width="55" height="55" viewBox="0 0 24 24" fill="#4A3728">
+    <path d="M8.35 3c-.44 0-.84.17-1.15.47-.3.31-.5.69-.5 1.11 0 .94.77 1.67 1.68 1.67.43 0 .83-.17 1.14-.47.3-.31.5-.69.5-1.11C10 3.73 9.24 3 8.35 3m7.3 0c-.44 0-.84.17-1.15.47-.3.31-.5.69-.5 1.11 0 .94.77 1.67 1.68 1.67.43 0 .83-.17 1.14-.47.3-.31.5-.69.5-1.11C17.32 3.73 16.56 3 15.65 3M5 6.5c-.66 0-1.27.26-1.73.7-.45.46-.72 1.07-.72 1.72C2.55 10.01 3.53 11 4.67 11c.65 0 1.26-.26 1.72-.7.45-.46.72-1.07.72-1.72C7.11 7.5 6.13 6.5 5 6.5m14 0c-.66 0-1.27.26-1.73.7-.45.46-.72 1.07-.72 1.72 0 1.09.98 2.08 2.12 2.08.65 0 1.26-.26 1.72-.7.45-.46.72-1.07.72-1.72 0-1.08-.98-2.08-2.11-2.08m-7 3c-2.35 0-4.23 1.88-4.53 4.26-.06.53.27.98.8.98h7.46c.53 0 .86-.45.8-.98C16.23 11.38 14.35 9.5 12 9.5"/>
+  </svg>
+  <svg class="floating-paw" width="40" height="40" viewBox="0 0 24 24" fill="#8B7355">
+    <path d="M8.35 3c-.44 0-.84.17-1.15.47-.3.31-.5.69-.5 1.11 0 .94.77 1.67 1.68 1.67.43 0 .83-.17 1.14-.47.3-.31.5-.69.5-1.11C10 3.73 9.24 3 8.35 3m7.3 0c-.44 0-.84.17-1.15.47-.3.31-.5.69-.5 1.11 0 .94.77 1.67 1.68 1.67.43 0 .83-.17 1.14-.47.3-.31.5-.69.5-1.11C17.32 3.73 16.56 3 15.65 3M5 6.5c-.66 0-1.27.26-1.73.7-.45.46-.72 1.07-.72 1.72C2.55 10.01 3.53 11 4.67 11c.65 0 1.26-.26 1.72-.7.45-.46.72-1.07.72-1.72C7.11 7.5 6.13 6.5 5 6.5m14 0c-.66 0-1.27.26-1.73.7-.45.46-.72 1.07-.72 1.72 0 1.09.98 2.08 2.12 2.08.65 0 1.26-.26 1.72-.7.45-.46.72-1.07.72-1.72 0-1.08-.98-2.08-2.11-2.08m-7 3c-2.35 0-4.23 1.88-4.53 4.26-.06.53.27.98.8.98h7.46c.53 0 .86-.45.8-.98C16.23 11.38 14.35 9.5 12 9.5"/>
+  </svg>
+  <svg class="floating-paw" width="50" height="50" viewBox="0 0 24 24" fill="#C9A86C">
+    <path d="M8.35 3c-.44 0-.84.17-1.15.47-.3.31-.5.69-.5 1.11 0 .94.77 1.67 1.68 1.67.43 0 .83-.17 1.14-.47.3-.31.5-.69.5-1.11C10 3.73 9.24 3 8.35 3m7.3 0c-.44 0-.84.17-1.15.47-.3.31-.5.69-.5 1.11 0 .94.77 1.67 1.68 1.67.43 0 .83-.17 1.14-.47.3-.31.5-.69.5-1.11C17.32 3.73 16.56 3 15.65 3M5 6.5c-.66 0-1.27.26-1.73.7-.45.46-.72 1.07-.72 1.72C2.55 10.01 3.53 11 4.67 11c.65 0 1.26-.26 1.72-.7.45-.46.72-1.07.72-1.72C7.11 7.5 6.13 6.5 5 6.5m14 0c-.66 0-1.27.26-1.73.7-.45.46-.72 1.07-.72 1.72 0 1.09.98 2.08 2.12 2.08.65 0 1.26-.26 1.72-.7.45-.46.72-1.07.72-1.72 0-1.08-.98-2.08-2.11-2.08m-7 3c-2.35 0-4.23 1.88-4.53 4.26-.06.53.27.98.8.98h7.46c.53 0 .86-.45.8-.98C16.23 11.38 14.35 9.5 12 9.5"/>
+  </svg>
+
+  <!-- Navigation -->
+  <nav id="main-nav" class="fixed top-0 left-0 right-0 z-50 bg-transparent text-white transition-all duration-300">
+    <div class="container mx-auto px-4 py-4 flex justify-between items-center">
+      <a href="index.html#hero" class="text-lg font-normal scroll-to-top">GBCペットアンバサダーサイト</a>
+
+      <!-- Desktop Menu -->
+      <ul class="hidden md:flex space-x-8">
+        <li><a href="index.html#hero" class="hover:text-accent transition scroll-to-top">Home</a></li>
+        <li><a href="index.html#about" class="hover:text-accent transition">About</a></li>
+        <li><a href="index.html#pet-friendly" class="hover:text-accent transition">Pet Friendly</a></li>
+        <li><a href="index.html#cheki-booth" class="hover:text-accent transition">Cheki Booth</a></li>
+        <li><a href="index.html#access" class="hover:text-accent transition">Access</a></li>
+        <li><a href="index.html#visit-diary" class="hover:text-accent transition">Visit Diary</a></li>
+        <li><a href="index.html#faq" class="hover:text-accent transition">FAQ</a></li>
+      </ul>
+
+      <!-- Mobile Hamburger Button -->
+      <button id="mobile-menu-btn" class="md:hidden" aria-label="メニューを開く">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <line x1="3" y1="12" x2="21" y2="12"></line>
+          <line x1="3" y1="6" x2="21" y2="6"></line>
+          <line x1="3" y1="18" x2="21" y2="18"></line>
+        </svg>
+      </button>
+    </div>
+
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="hidden md:hidden bg-white/30 backdrop-blur-md shadow-lg">
+      <ul class="flex flex-col items-center space-y-4 py-6">
+        <li><a href="index.html#hero" class="text-primary hover:text-accent transition mobile-menu-link scroll-to-top">Home</a></li>
+        <li><a href="index.html#about" class="text-primary hover:text-accent transition mobile-menu-link">About</a></li>
+        <li><a href="index.html#pet-friendly" class="text-primary hover:text-accent transition mobile-menu-link">Pet Friendly</a></li>
+        <li><a href="index.html#cheki-booth" class="text-primary hover:text-accent transition mobile-menu-link">Cheki Booth</a></li>
+        <li><a href="index.html#access" class="text-primary hover:text-accent transition mobile-menu-link">Access</a></li>
+        <li><a href="index.html#visit-diary" class="text-primary hover:text-accent transition mobile-menu-link">Visit Diary</a></li>
+        <li><a href="index.html#faq" class="text-primary hover:text-accent transition mobile-menu-link">FAQ</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Main Content -->
+  <main>
+    <!-- Hero Section -->
+    <section id="hero" class="relative h-screen flex items-center justify-center overflow-hidden">
+      <!-- Background Images with Auto-switching (2 layers for smooth transition) -->
+      <div class="absolute inset-0 z-0">
+        <img id="hero-bg-1" src="assets/images/hero/hero-bg-1.jpg"
+             alt="Green Beans Coffeeで愛犬と過ごすひととき。北参道の都会派ペットフレンドリーカフェ"
+             class="absolute inset-0 w-full h-full object-cover object-bottom transition-opacity duration-[4000ms] ease-in-out">
+        <img id="hero-bg-2" src="assets/images/hero/hero-bg-2.jpg"
+             alt="愛犬と一緒に店内で楽しめる北参道のカフェGreen Beans Coffee。店内ペット同伴OKのくつろぎ空間"
+             class="absolute inset-0 w-full h-full object-cover opacity-0 transition-opacity duration-[4000ms] ease-in-out">
+        <div class="absolute inset-0 bg-gradient-to-b from-black/40 via-black/25 to-black/50"></div>
+        <!-- Bottom fade to match wave divider -->
+        <div class="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-[#4A3728] to-transparent"></div>
+      </div>
+
+      <!-- Hero Content -->
+      <div class="relative z-10 text-center text-white px-4">
+        <h1 class="text-5xl md:text-7xl font-bold mb-4 animate__animated animate__fadeInDown" style="text-shadow: 0 6px 12px rgba(0,0,0,0.5), 0 12px 24px rgba(0,0,0,0.4), 0 0 60px rgba(255,255,255,0.3), 0 0 100px rgba(201,168,108,0.2);">
+          Green Beans Coffee
+        </h1>
+      </div>
+
+      <!-- Subtitle (positioned lower) -->
+      <div class="absolute bottom-28 left-0 right-0 z-10 text-center text-white animate__animated animate__fadeInUp animate__delay-1s">
+        <p class="text-xl md:text-2xl">
+          愛犬と一緒に過ごせる<br>北参道・千駄ヶ谷の<br class="md:hidden">都会派ペットフレンドリーカフェ
+        </p>
+      </div>
+
+      <!-- Ambassador Badge -->
+      <div class="absolute bottom-8 right-8 z-10 text-white text-left animate__animated animate__fadeIn animate__delay-2s">
+        <p class="text-sm opacity-90">GBCペットアンバサダー Ayaka</p>
+      </div>
+
+      <!-- Scroll Indicator -->
+      <div class="absolute bottom-8 left-1/2 transform -translate-x-1/2 z-10 animate-bounce">
+        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <line x1="12" y1="5" x2="12" y2="19"></line>
+          <polyline points="19 12 12 19 5 12"></polyline>
+        </svg>
+      </div>
+    </section>
+
+    <!-- Wave Divider: Hero to About -->
+    <div class="wave-divider wave-divider-hero wave-problematic" style="background-color: #4A3728;">
+      <svg viewBox="0 0 1200 80" preserveAspectRatio="none" shape-rendering="geometricPrecision">
+        <path d="M0,30 C200,60 400,0 600,30 C800,60 1000,0 1200,30 L1200,80 L0,80 Z" fill="#ffffff"/>
+      </svg>
+    </div>
+
+    <!-- About Section -->
+    <section id="about" class="py-20 bg-white">
+      <div class="container mx-auto px-4">
+        <h2 class="text-4xl md:text-5xl font-bold text-center text-primary mb-12" data-aos="fade-up">About Green Beans Coffee</h2>
+
+        <!-- Lead Text -->
+        <div class="max-w-3xl mx-auto mb-16 text-left" data-aos="fade-up">
+          <p class="text-lg leading-relaxed">
+            東京都渋谷区 北参道・千駄ヶ谷エリアの「ダガヤサンドウ」で見つけた愛犬と一緒に過ごせる隠れ家カフェ。店内に入った瞬間に広がるコーヒーの香り、そしてペットを温かく迎えてくれるスタッフさんたち。ここはGBCアンバサダーである私と愛犬のポン（ポメラニアン）にとって特別な場所になりました。このサイトはGreen Beans Coffeeのアンバサダーとしてお店の魅力を伝えるサイトです。
+          </p>
+        </div>
+
+        <!-- Photo Gallery & Shop Info -->
+        <div class="grid lg:grid-cols-2 gap-12 max-w-6xl mx-auto">
+          <!-- Photo Gallery -->
+          <div class="relative flex flex-col gap-6 h-full" data-aos="fade-right">
+            <!-- Photo 1: Shop Front -->
+            <div class="relative flex-1 rounded-2xl overflow-hidden shadow-lg playful-card">
+              <img
+                src="../assets/images/about-shop-front.jpg"
+                alt="北参道・千駄ヶ谷のダガヤサンドウエリアに佇む、店名看板のない隠れ家カフェGreen Beans Coffee"
+                class="w-full h-full object-cover"
+                loading="lazy"
+                decoding="async"
+              >
+              <div class="absolute inset-0 bg-gradient-to-t from-primary/30 to-transparent"></div>
+            </div>
+
+            <!-- Photo 2: Coffee Beans Display -->
+            <div class="relative flex-1 rounded-2xl overflow-hidden shadow-lg playful-card">
+              <img
+                src="assets/images/about-pet-interior.jpg"
+                alt="自家焙煎コーヒー豆"
+                class="w-full h-full object-cover"
+                loading="lazy"
+                decoding="async"
+              >
+              <div class="absolute inset-0 bg-gradient-to-t from-primary/30 to-transparent"></div>
+            </div>
+
+            <!-- Decorative Paw Icon -->
+            <div class="absolute -bottom-4 -right-4 opacity-20 pointer-events-none">
+              <svg width="80" height="80" viewBox="0 0 24 24" fill="#C9A86C">
+                <path d="M8.35 3c-.44 0-.84.17-1.15.47-.3.31-.5.69-.5 1.11 0 .94.77 1.67 1.68 1.67.43 0 .83-.17 1.14-.47.3-.31.5-.69.5-1.11C10 3.73 9.24 3 8.35 3m7.3 0c-.44 0-.84.17-1.15.47-.3.31-.5.69-.5 1.11 0 .94.77 1.67 1.68 1.67.43 0 .83-.17 1.14-.47.3-.31.5-.69.5-1.11C17.32 3.73 16.56 3 15.65 3M5 6.5c-.66 0-1.27.26-1.73.7-.45.46-.72 1.07-.72 1.72C2.55 10.01 3.53 11 4.67 11c.65 0 1.26-.26 1.72-.7.45-.46.72-1.07.72-1.72C7.11 7.5 6.13 6.5 5 6.5m14 0c-.66 0-1.27.26-1.73.7-.45.46-.72 1.07-.72 1.72 0 1.09.98 2.08 2.12 2.08.65 0 1.26-.26 1.72-.7.45-.46.72-1.07.72-1.72 0-1.08-.98-2.08-2.11-2.08m-7 3c-2.35 0-4.23 1.88-4.53 4.26-.06.53.27.98.8.98h7.46c.53 0 .86-.45.8-.98C16.23 11.38 14.35 9.5 12 9.5"/>
+              </svg>
+            </div>
+          </div>
+
+          <!-- Shop Basic Info -->
+          <div class="bg-background p-8 rounded-lg shadow-md playful-card flex flex-col" data-aos="fade-left">
+            <h3 class="text-2xl font-bold text-primary mb-6">店舗基本情報</h3>
+
+            <!-- Desktop: Table Layout -->
+            <div class="hidden md:block overflow-x-auto">
+              <table class="w-full">
+                <tr class="border-b border-accent/30">
+                  <th class="text-left py-3 text-primary font-semibold">店舗名</th>
+                  <td class="py-3">Green Beans Coffee<br>（グリーンビーンズコーヒー）</td>
+                </tr>
+                <tr class="border-b border-accent/30">
+                  <th class="text-left py-3 text-primary font-semibold">ジャンル</th>
+                  <td class="py-3">コーヒー専門店・カフェ</td>
+                </tr>
+                <tr class="border-b border-accent/30">
+                  <th class="text-left py-3 text-primary font-semibold">住所</th>
+                  <td class="py-3">〒151-0051<br>東京都渋谷区千駄ヶ谷3-30-1<br>RC APARTMENT 1階</td>
+                </tr>
+                <tr class="border-b border-accent/30">
+                  <th class="text-left py-3 text-primary font-semibold">電話番号</th>
+                  <td class="py-3">03-6447-0681</td>
+                </tr>
+                <tr class="border-b border-accent/30">
+                  <th class="text-left py-3 text-primary font-semibold">営業時間</th>
+                  <td class="py-3">10:30〜20:00 （L.O. 19:30）</td>
+                </tr>
+                <tr class="border-b border-accent/30">
+                  <th class="text-left py-3 text-primary font-semibold">定休日</th>
+                  <td class="py-3">不定休（<a href="https://www.instagram.com/green.beanscoffee" target="_blank" class="no-underline hover:underline transition-all">Instagram</a>で確認）</td>
+                </tr>
+                <tr class="border-b border-accent/30">
+                  <th class="text-left py-3 text-primary font-semibold">席数</th>
+                  <td class="py-3">30席（カウンター4席、テーブル26席）</td>
+                </tr>
+                <tr class="border-b border-accent/30">
+                  <th class="text-left py-3 text-primary font-semibold">禁煙・喫煙</th>
+                  <td class="py-3">店内禁煙（喫煙専用席なし）</td>
+                </tr>
+                <tr class="border-b border-accent/30">
+                  <th class="text-left py-3 text-primary font-semibold">予約</th>
+                  <td class="py-3">可（<a href="https://www.instagram.com/green.beanscoffee" target="_blank" class="no-underline hover:underline transition-all">Instagram</a> DM・電話・食べログ）</td>
+                </tr>
+                <tr class="border-b border-accent/30">
+                  <th class="text-left py-3 text-primary font-semibold">貸切</th>
+                  <td class="py-3">可（着席20名・立食30名）<br>様々なイベントで貸切対応可</td>
+                </tr>
+                <tr class="border-b border-accent/30">
+                  <th class="text-left py-3 text-primary font-semibold">設備</th>
+                  <td class="py-3">Wi-Fi（無料）・電源完備<br>店内ペット同伴OK・ベビーカー入店OK<br>バリアフリー・テイクアウトOK<br>英語メニューあり</td>
+                </tr>
+                <tr>
+                  <th class="text-left py-3 text-primary font-semibold">支払い方法</th>
+                  <td class="py-3">現金・クレジットカード<br>電子マネー・QR決済<br><button onclick="openPaymentModal()" class="text-secondary hover:text-primary underline text-sm mt-1 transition-colors">詳細を見る</button></td>
+                </tr>
+              </table>
+            </div>
+
+            <!-- Mobile: Single-column Table Layout -->
+            <div class="md:hidden divide-y divide-gray-300 border-t border-b border-gray-300">
+              <div class="py-4">
+                <div class="text-sm font-semibold text-primary mb-1">店舗名</div>
+                <div class="text-text">Green Beans Coffee<br>（グリーンビーンズコーヒー）</div>
+              </div>
+              <div class="py-4">
+                <div class="text-sm font-semibold text-primary mb-1">ジャンル</div>
+                <div class="text-text">コーヒー専門店・カフェ</div>
+              </div>
+              <div class="py-4">
+                <div class="text-sm font-semibold text-primary mb-1">住所</div>
+                <div class="text-text">〒151-0051<br>東京都渋谷区千駄ヶ谷3-30-1<br>RC APARTMENT 1階</div>
+              </div>
+              <div class="py-4">
+                <div class="text-sm font-semibold text-primary mb-1">電話番号</div>
+                <div class="text-text">03-6447-0681</div>
+              </div>
+              <div class="py-4">
+                <div class="text-sm font-semibold text-primary mb-1">営業時間</div>
+                <div class="text-text">10:30〜20:00 （L.O. 19:30）</div>
+              </div>
+              <div class="py-4">
+                <div class="text-sm font-semibold text-primary mb-1">定休日</div>
+                <div class="text-text">不定休（<a href="https://www.instagram.com/green.beanscoffee" target="_blank" class="no-underline hover:underline transition-all">Instagram</a>で確認）</div>
+              </div>
+              <div class="py-4">
+                <div class="text-sm font-semibold text-primary mb-1">席数</div>
+                <div class="text-text">30席（カウンター4席、テーブル26席）</div>
+              </div>
+              <div class="py-4">
+                <div class="text-sm font-semibold text-primary mb-1">禁煙・喫煙</div>
+                <div class="text-text">店内禁煙（喫煙専用席なし）</div>
+              </div>
+              <div class="py-4">
+                <div class="text-sm font-semibold text-primary mb-1">予約</div>
+                <div class="text-text">可（<a href="https://www.instagram.com/green.beanscoffee" target="_blank" class="no-underline hover:underline transition-all">Instagram</a> DM・電話・食べログ）</div>
+              </div>
+              <div class="py-4">
+                <div class="text-sm font-semibold text-primary mb-1">貸切</div>
+                <div class="text-text">可（着席20名・立食30名）<br>様々なイベントで貸切対応可</div>
+              </div>
+              <div class="py-4">
+                <div class="text-sm font-semibold text-primary mb-1">設備</div>
+                <div class="text-text">Wi-Fi（無料）・電源完備<br>店内ペット同伴OK・ベビーカー入店OK<br>バリアフリー・テイクアウトOK<br>英語メニューあり</div>
+              </div>
+              <div class="py-4">
+                <div class="text-sm font-semibold text-primary mb-1">支払い方法</div>
+                <div class="text-text">現金・クレジットカード<br>電子マネー・QR決済<br><button onclick="openPaymentModal()" class="text-secondary hover:text-primary underline text-sm mt-1 transition-colors">詳細を見る</button></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Link to Menu -->
+        <div class="text-center mt-12" data-aos="fade-up">
+          <a href="../index.html#menu" target="_blank" rel="noopener noreferrer" class="inline-block bg-primary text-white px-8 py-3 rounded-full hover:bg-secondary transition-colors duration-300 playful-btn">
+            <span class="block md:inline">カフェのメニューを見る</span><span class="block md:inline text-sm md:text-base">（メインサイト）</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Wave Divider -->
+    <div class="wave-divider bg-white">
+      <svg viewBox="0 0 1200 60" preserveAspectRatio="none">
+        <path d="M0,30 C200,60 400,0 600,30 C800,60 1000,0 1200,30 L1200,60 L0,60 Z" fill="#FAF8F5"/>
+      </svg>
+    </div>
+
+    <!-- Pet Friendly Section -->
+    <section id="pet-friendly" class="py-20 bg-gradient-to-b from-background to-white">
+      <div class="container mx-auto px-6">
+        <h2 class="text-4xl md:text-5xl font-bold text-center text-primary mb-6" data-aos="fade-up">Pet Friendly</h2>
+        <p class="text-left md:text-center text-lg text-text mb-16 max-w-3xl mx-auto" data-aos="fade-up" data-aos-delay="100">
+          Green Beans Coffeeは店内でペットと一緒に過ごせる都会派ペットフレンドリーカフェです。
+        </p>
+
+        <!-- Cards Grid -->
+        <div class="grid md:grid-cols-[36%_25%_39%] gap-8 max-w-5xl mx-auto">
+          <!-- Card 1: Rules -->
+          <div class="bg-white p-8 rounded-lg shadow-xl playful-card" data-aos="fade-up" data-aos-delay="100">
+            <h3 class="text-xl font-bold text-primary mb-4 text-center">ペット同伴について</h3>
+            <div class="w-20 h-20 rounded-full overflow-hidden mb-6 mx-auto relative shadow-lg ring-2 ring-white ring-offset-2 ring-offset-accent/40">
+              <img src="assets/images/pet-friendly/pet-friendly-1.jpg" alt="ペット同伴のルール" class="w-full h-full object-cover" loading="lazy" decoding="async">
+              <div class="absolute inset-0 bg-accent/20"></div>
+            </div>
+            <ul class="space-y-3 text-text">
+              <li class="flex items-start gap-2">
+                <svg width="16" height="16" viewBox="0 0 24 15" fill="#C9A86C" class="flex-shrink-0 mt-1">
+                  <path d="M8.35 3c-.44 0-.84.17-1.15.47-.3.31-.5.69-.5 1.11 0 .94.77 1.67 1.68 1.67.43 0 .83-.17 1.14-.47.3-.31.5-.69.5-1.11C10 3.73 9.24 3 8.35 3m7.3 0c-.44 0-.84.17-1.15.47-.3.31-.5.69-.5 1.11 0 .94.77 1.67 1.68 1.67.43 0 .83-.17 1.14-.47.3-.31.5-.69.5-1.11C17.32 3.73 16.56 3 15.65 3M5 6.5c-.66 0-1.27.26-1.73.7-.45.46-.72 1.07-.72 1.72C2.55 10.01 3.53 11 4.67 11c.65 0 1.26-.26 1.72-.7.45-.46.72-1.07.72-1.72C7.11 7.5 6.13 6.5 5 6.5m14 0c-.66 0-1.27.26-1.73.7-.45.46-.72 1.07-.72 1.72 0 1.09.98 2.08 2.12 2.08.65 0 1.26-.26 1.72-.7.45-.46.72-1.07.72-1.72 0-1.08-.98-2.08-2.11-2.08m-7 3c-2.35 0-4.23 1.88-4.53 4.26-.06.53.27.98.8.98h7.46c.53 0 .86-.45.8-.98C16.23 11.38 14.35 9.5 12 9.5m0 2.5c1.12 0 2.07.74 2.39 1.75H9.61c.32-1.01 1.27-1.75 2.39-1.75"/>
+                </svg>
+                <span>小型犬〜中型犬まで店内同伴OK</span>
+              </li>
+              <li class="flex items-start gap-2">
+                <svg width="16" height="16" viewBox="0 0 24 15" fill="#C9A86C" class="flex-shrink-0 mt-1">
+                  <path d="M8.35 3c-.44 0-.84.17-1.15.47-.3.31-.5.69-.5 1.11 0 .94.77 1.67 1.68 1.67.43 0 .83-.17 1.14-.47.3-.31.5-.69.5-1.11C10 3.73 9.24 3 8.35 3m7.3 0c-.44 0-.84.17-1.15.47-.3.31-.5.69-.5 1.11 0 .94.77 1.67 1.68 1.67.43 0 .83-.17 1.14-.47.3-.31.5-.69.5-1.11C17.32 3.73 16.56 3 15.65 3M5 6.5c-.66 0-1.27.26-1.73.7-.45.46-.72 1.07-.72 1.72C2.55 10.01 3.53 11 4.67 11c.65 0 1.26-.26 1.72-.7.45-.46.72-1.07.72-1.72C7.11 7.5 6.13 6.5 5 6.5m14 0c-.66 0-1.27.26-1.73.7-.45.46-.72 1.07-.72 1.72 0 1.09.98 2.08 2.12 2.08.65 0 1.26-.26 1.72-.7.45-.46.72-1.07.72-1.72 0-1.08-.98-2.08-2.11-2.08m-7 3c-2.35 0-4.23 1.88-4.53 4.26-.06.53.27.98.8.98h7.46c.53 0 .86-.45.8-.98C16.23 11.38 14.35 9.5 12 9.5m0 2.5c1.12 0 2.07.74 2.39 1.75H9.61c.32-1.01 1.27-1.75 2.39-1.75"/>
+                </svg>
+                <span>リードの着用をお願いしています</span>
+              </li>
+              <li class="flex items-start gap-2">
+                <svg width="16" height="16" viewBox="0 0 24 15" fill="#C9A86C" class="flex-shrink-0 mt-1">
+                  <path d="M8.35 3c-.44 0-.84.17-1.15.47-.3.31-.5.69-.5 1.11 0 .94.77 1.67 1.68 1.67.43 0 .83-.17 1.14-.47.3-.31.5-.69.5-1.11C10 3.73 9.24 3 8.35 3m7.3 0c-.44 0-.84.17-1.15.47-.3.31-.5.69-.5 1.11 0 .94.77 1.67 1.68 1.67.43 0 .83-.17 1.14-.47.3-.31.5-.69.5-1.11C17.32 3.73 16.56 3 15.65 3M5 6.5c-.66 0-1.27.26-1.73.7-.45.46-.72 1.07-.72 1.72C2.55 10.01 3.53 11 4.67 11c.65 0 1.26-.26 1.72-.7.45-.46.72-1.07.72-1.72C7.11 7.5 6.13 6.5 5 6.5m14 0c-.66 0-1.27.26-1.73.7-.45.46-.72 1.07-.72 1.72 0 1.09.98 2.08 2.12 2.08.65 0 1.26-.26 1.72-.7.45-.46.72-1.07.72-1.72 0-1.08-.98-2.08-2.11-2.08m-7 3c-2.35 0-4.23 1.88-4.53 4.26-.06.53.27.98.8.98h7.46c.53 0 .86-.45.8-.98C16.23 11.38 14.35 9.5 12 9.5m0 2.5c1.12 0 2.07.74 2.39 1.75H9.61c.32-1.01 1.27-1.75 2.39-1.75"/>
+                </svg>
+                <span>他のお客さまへの配慮をお願いします</span>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Card 2: Facilities -->
+          <div class="bg-white p-8 rounded-lg shadow-xl playful-card" data-aos="fade-up" data-aos-delay="200">
+            <h3 class="text-xl font-bold text-primary mb-4 text-center">ペット向けサービス</h3>
+            <div class="w-20 h-20 rounded-full overflow-hidden mb-6 mx-auto relative shadow-lg ring-2 ring-white ring-offset-2 ring-offset-accent/40">
+              <img src="assets/images/pet-friendly/pet-friendly-2.jpg" alt="ペット向けサービス" class="w-full h-full object-cover" loading="lazy" decoding="async">
+              <div class="absolute inset-0 bg-accent/20"></div>
+            </div>
+            <ul class="space-y-3 text-text">
+              <li class="flex items-start gap-2">
+                <svg width="16" height="16" viewBox="0 0 24 15" fill="#C9A86C" class="flex-shrink-0 mt-1">
+                  <path d="M8.35 3c-.44 0-.84.17-1.15.47-.3.31-.5.69-.5 1.11 0 .94.77 1.67 1.68 1.67.43 0 .83-.17 1.14-.47.3-.31.5-.69.5-1.11C10 3.73 9.24 3 8.35 3m7.3 0c-.44 0-.84.17-1.15.47-.3.31-.5.69-.5 1.11 0 .94.77 1.67 1.68 1.67.43 0 .83-.17 1.14-.47.3-.31.5-.69.5-1.11C17.32 3.73 16.56 3 15.65 3M5 6.5c-.66 0-1.27.26-1.73.7-.45.46-.72 1.07-.72 1.72C2.55 10.01 3.53 11 4.67 11c.65 0 1.26-.26 1.72-.7.45-.46.72-1.07.72-1.72C7.11 7.5 6.13 6.5 5 6.5m14 0c-.66 0-1.27.26-1.73.7-.45.46-.72 1.07-.72 1.72 0 1.09.98 2.08 2.12 2.08.65 0 1.26-.26 1.72-.7.45-.46.72-1.07.72-1.72 0-1.08-.98-2.08-2.11-2.08m-7 3c-2.35 0-4.23 1.88-4.53 4.26-.06.53.27.98.8.98h7.46c.53 0 .86-.45.8-.98C16.23 11.38 14.35 9.5 12 9.5m0 2.5c1.12 0 2.07.74 2.39 1.75H9.61c.32-1.01 1.27-1.75 2.39-1.75"/>
+                </svg>
+                <span>お水のご提供あり<br><small class="text-secondary">※フードメニューなし</small></span>
+              </li>
+              <li class="flex items-start gap-2">
+                <svg width="16" height="16" viewBox="0 0 24 15" fill="#C9A86C" class="flex-shrink-0 mt-1">
+                  <path d="M8.35 3c-.44 0-.84.17-1.15.47-.3.31-.5.69-.5 1.11 0 .94.77 1.67 1.68 1.67.43 0 .83-.17 1.14-.47.3-.31.5-.69.5-1.11C10 3.73 9.24 3 8.35 3m7.3 0c-.44 0-.84.17-1.15.47-.3.31-.5.69-.5 1.11 0 .94.77 1.67 1.68 1.67.43 0 .83-.17 1.14-.47.3-.31.5-.69.5-1.11C17.32 3.73 16.56 3 15.65 3M5 6.5c-.66 0-1.27.26-1.73.7-.45.46-.72 1.07-.72 1.72C2.55 10.01 3.53 11 4.67 11c.65 0 1.26-.26 1.72-.7.45-.46.72-1.07.72-1.72C7.11 7.5 6.13 6.5 5 6.5m14 0c-.66 0-1.27.26-1.73.7-.45.46-.72 1.07-.72 1.72 0 1.09.98 2.08 2.12 2.08.65 0 1.26-.26 1.72-.7.45-.46.72-1.07.72-1.72 0-1.08-.98-2.08-2.11-2.08m-7 3c-2.35 0-4.23 1.88-4.53 4.26-.06.53.27.98.8.98h7.46c.53 0 .86-.45.8-.98C16.23 11.38 14.35 9.5 12 9.5m0 2.5c1.12 0 2.07.74 2.39 1.75H9.61c.32-1.01 1.27-1.75 2.39-1.75"/>
+                </svg>
+                <span>水飲みボウルあり</span>
+              </li>
+              <li class="flex items-start gap-2">
+                <svg width="16" height="16" viewBox="0 0 24 15" fill="#C9A86C" class="flex-shrink-0 mt-1">
+                  <path d="M8.35 3c-.44 0-.84.17-1.15.47-.3.31-.5.69-.5 1.11 0 .94.77 1.67 1.68 1.67.43 0 .83-.17 1.14-.47.3-.31.5-.69.5-1.11C10 3.73 9.24 3 8.35 3m7.3 0c-.44 0-.84.17-1.15.47-.3.31-.5.69-.5 1.11 0 .94.77 1.67 1.68 1.67.43 0 .83-.17 1.14-.47.3-.31.5-.69.5-1.11C17.32 3.73 16.56 3 15.65 3M5 6.5c-.66 0-1.27.26-1.73.7-.45.46-.72 1.07-.72 1.72C2.55 10.01 3.53 11 4.67 11c.65 0 1.26-.26 1.72-.7.45-.46.72-1.07.72-1.72C7.11 7.5 6.13 6.5 5 6.5m14 0c-.66 0-1.27.26-1.73.7-.45.46-.72 1.07-.72 1.72 0 1.09.98 2.08 2.12 2.08.65 0 1.26-.26 1.72-.7.45-.46.72-1.07.72-1.72 0-1.08-.98-2.08-2.11-2.08m-7 3c-2.35 0-4.23 1.88-4.53 4.26-.06.53.27.98.8.98h7.46c.53 0 .86-.45.8-.98C16.23 11.38 14.35 9.5 12 9.5m0 2.5c1.12 0 2.07.74 2.39 1.75H9.61c.32-1.01 1.27-1.75 2.39-1.75"/>
+                </svg>
+                <span>チェキサービスあり</span>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Card 3: How to Enjoy -->
+          <div class="bg-white p-8 rounded-lg shadow-xl playful-card" data-aos="fade-up" data-aos-delay="300">
+            <h3 class="text-xl font-bold text-primary mb-4 text-center">おすすめの過ごし方</h3>
+            <div class="w-20 h-20 rounded-full overflow-hidden mb-6 mx-auto relative shadow-lg ring-2 ring-white ring-offset-2 ring-offset-accent/40">
+              <img src="assets/images/pet-friendly/pet-friendly-3.jpg" alt="おすすめの過ごし方" class="w-full h-full object-cover" loading="lazy" decoding="async">
+              <div class="absolute inset-0 bg-accent/20"></div>
+            </div>
+            <ul class="space-y-3 text-text">
+              <li class="flex items-start gap-2">
+                <svg width="16" height="16" viewBox="0 0 24 15" fill="#C9A86C" class="flex-shrink-0 mt-1">
+                  <path d="M8.35 3c-.44 0-.84.17-1.15.47-.3.31-.5.69-.5 1.11 0 .94.77 1.67 1.68 1.67.43 0 .83-.17 1.14-.47.3-.31.5-.69.5-1.11C10 3.73 9.24 3 8.35 3m7.3 0c-.44 0-.84.17-1.15.47-.3.31-.5.69-.5 1.11 0 .94.77 1.67 1.68 1.67.43 0 .83-.17 1.14-.47.3-.31.5-.69.5-1.11C17.32 3.73 16.56 3 15.65 3M5 6.5c-.66 0-1.27.26-1.73.7-.45.46-.72 1.07-.72 1.72C2.55 10.01 3.53 11 4.67 11c.65 0 1.26-.26 1.72-.7.45-.46.72-1.07.72-1.72C7.11 7.5 6.13 6.5 5 6.5m14 0c-.66 0-1.27.26-1.73.7-.45.46-.72 1.07-.72 1.72 0 1.09.98 2.08 2.12 2.08.65 0 1.26-.26 1.72-.7.45-.46.72-1.07.72-1.72 0-1.08-.98-2.08-2.11-2.08m-7 3c-2.35 0-4.23 1.88-4.53 4.26-.06.53.27.98.8.98h7.46c.53 0 .86-.45.8-.98C16.23 11.38 14.35 9.5 12 9.5m0 2.5c1.12 0 2.07.74 2.39 1.75H9.61c.32-1.01 1.27-1.75 2.39-1.75"/>
+                </svg>
+                <span>ゆっくりコーヒーを楽しむ</span>
+              </li>
+              <li class="flex items-start gap-2">
+                <svg width="16" height="16" viewBox="0 0 24 15" fill="#C9A86C" class="flex-shrink-0 mt-1">
+                  <path d="M8.35 3c-.44 0-.84.17-1.15.47-.3.31-.5.69-.5 1.11 0 .94.77 1.67 1.68 1.67.43 0 .83-.17 1.14-.47.3-.31.5-.69.5-1.11C10 3.73 9.24 3 8.35 3m7.3 0c-.44 0-.84.17-1.15.47-.3.31-.5.69-.5 1.11 0 .94.77 1.67 1.68 1.67.43 0 .83-.17 1.14-.47.3-.31.5-.69.5-1.11C17.32 3.73 16.56 3 15.65 3M5 6.5c-.66 0-1.27.26-1.73.7-.45.46-.72 1.07-.72 1.72C2.55 10.01 3.53 11 4.67 11c.65 0 1.26-.26 1.72-.7.45-.46.72-1.07.72-1.72C7.11 7.5 6.13 6.5 5 6.5m14 0c-.66 0-1.27.26-1.73.7-.45.46-.72 1.07-.72 1.72 0 1.09.98 2.08 2.12 2.08.65 0 1.26-.26 1.72-.7.45-.46.72-1.07.72-1.72 0-1.08-.98-2.08-2.11-2.08m-7 3c-2.35 0-4.23 1.88-4.53 4.26-.06.53.27.98.8.98h7.46c.53 0 .86-.45.8-.98C16.23 11.38 14.35 9.5 12 9.5m0 2.5c1.12 0 2.07.74 2.39 1.75H9.61c.32-1.01 1.27-1.75 2.39-1.75"/>
+                </svg>
+                <span>愛犬と一緒の時間を楽しむ</span>
+              </li>
+              <li class="flex items-start gap-2">
+                <svg width="16" height="16" viewBox="0 0 24 15" fill="#C9A86C" class="flex-shrink-0 mt-1">
+                  <path d="M8.35 3c-.44 0-.84.17-1.15.47-.3.31-.5.69-.5 1.11 0 .94.77 1.67 1.68 1.67.43 0 .83-.17 1.14-.47.3-.31.5-.69.5-1.11C10 3.73 9.24 3 8.35 3m7.3 0c-.44 0-.84.17-1.15.47-.3.31-.5.69-.5 1.11 0 .94.77 1.67 1.68 1.67.43 0 .83-.17 1.14-.47.3-.31.5-.69.5-1.11C17.32 3.73 16.56 3 15.65 3M5 6.5c-.66 0-1.27.26-1.73.7-.45.46-.72 1.07-.72 1.72C2.55 10.01 3.53 11 4.67 11c.65 0 1.26-.26 1.72-.7.45-.46.72-1.07.72-1.72C7.11 7.5 6.13 6.5 5 6.5m14 0c-.66 0-1.27.26-1.73.7-.45.46-.72 1.07-.72 1.72 0 1.09.98 2.08 2.12 2.08.65 0 1.26-.26 1.72-.7.45-.46.72-1.07.72-1.72 0-1.08-.98-2.08-2.11-2.08m-7 3c-2.35 0-4.23 1.88-4.53 4.26-.06.53.27.98.8.98h7.46c.53 0 .86-.45.8-.98C16.23 11.38 14.35 9.5 12 9.5m0 2.5c1.12 0 2.07.74 2.39 1.75H9.61c.32-1.01 1.27-1.75 2.39-1.75"/>
+                </svg>
+                <span>思い出として写真（スマホ）に残す</span>
+              </li>
+              <li class="flex items-start gap-2">
+                <svg width="16" height="16" viewBox="0 0 24 15" fill="#C9A86C" class="flex-shrink-0 mt-1">
+                  <path d="M8.35 3c-.44 0-.84.17-1.15.47-.3.31-.5.69-.5 1.11 0 .94.77 1.67 1.68 1.67.43 0 .83-.17 1.14-.47.3-.31.5-.69.5-1.11C10 3.73 9.24 3 8.35 3m7.3 0c-.44 0-.84.17-1.15.47-.3.31-.5.69-.5 1.11 0 .94.77 1.67 1.68 1.67.43 0 .83-.17 1.14-.47.3-.31.5-.69.5-1.11C17.32 3.73 16.56 3 15.65 3M5 6.5c-.66 0-1.27.26-1.73.7-.45.46-.72 1.07-.72 1.72C2.55 10.01 3.53 11 4.67 11c.65 0 1.26-.26 1.72-.7.45-.46.72-1.07.72-1.72C7.11 7.5 6.13 6.5 5 6.5m14 0c-.66 0-1.27.26-1.73.7-.45.46-.72 1.07-.72 1.72 0 1.09.98 2.08 2.12 2.08.65 0 1.26-.26 1.72-.7.45-.46.72-1.07.72-1.72 0-1.08-.98-2.08-2.11-2.08m-7 3c-2.35 0-4.23 1.88-4.53 4.26-.06.53.27.98.8.98h7.46c.53 0 .86-.45.8-.98C16.23 11.38 14.35 9.5 12 9.5m0 2.5c1.12 0 2.07.74 2.39 1.75H9.61c.32-1.01 1.27-1.75 2.39-1.75"/>
+                </svg>
+                <span>チェキ写真・フォトブースに思い出を残す（スタッフにお伝えください）</span>
+              </li>
+            </ul>
+          </div>
+
+        </div>
+
+        <!-- やさしいペット同伴ルール -->
+        <div class="max-w-4xl mx-auto mt-16 bg-white border-2 border-accent/20 rounded-2xl shadow-lg overflow-hidden" data-aos="fade-up">
+          <div class="bg-accent/15 py-6 px-8">
+            <div class="flex justify-center items-center gap-3">
+              <svg width="24" height="24" viewBox="0 0 24 15" fill="#C9A86C" opacity="0.7">
+                <path d="M8.35 3c-.44 0-.84.17-1.15.47-.3.31-.5.69-.5 1.11 0 .94.77 1.67 1.68 1.67.43 0 .83-.17 1.14-.47.3-.31.5-.69.5-1.11C10 3.73 9.24 3 8.35 3m7.3 0c-.44 0-.84.17-1.15.47-.3.31-.5.69-.5 1.11 0 .94.77 1.67 1.68 1.67.43 0 .83-.17 1.14-.47.3-.31.5-.69.5-1.11C17.32 3.73 16.56 3 15.65 3M5 6.5c-.66 0-1.27.26-1.73.7-.45.46-.72 1.07-.72 1.72C2.55 10.01 3.53 11 4.67 11c.65 0 1.26-.26 1.72-.7.45-.46.72-1.07.72-1.72C7.11 7.5 6.13 6.5 5 6.5m14 0c-.66 0-1.27.26-1.73.7-.45.46-.72 1.07-.72 1.72 0 1.09.98 2.08 2.12 2.08.65 0 1.26-.26 1.72-.7.45-.46.72-1.07.72-1.72 0-1.08-.98-2.08-2.11-2.08m-7 3c-2.35 0-4.23 1.88-4.53 4.26-.06.53.27.98.8.98h7.46c.53 0 .86-.45.8-.98C16.23 11.38 14.35 9.5 12 9.5m0 2.5c1.12 0 2.07.74 2.39 1.75H9.61c.32-1.01 1.27-1.75 2.39-1.75"/>
+              </svg>
+              <h3 class="text-lg md:text-2xl font-bold text-primary text-center">やさしい<br class="md:hidden">ペット同伴ルール</h3>
+              <svg width="24" height="24" viewBox="0 0 24 15" fill="#C9A86C" opacity="0.7">
+                <path d="M8.35 3c-.44 0-.84.17-1.15.47-.3.31-.5.69-.5 1.11 0 .94.77 1.67 1.68 1.67.43 0 .83-.17 1.14-.47.3-.31.5-.69.5-1.11C10 3.73 9.24 3 8.35 3m7.3 0c-.44 0-.84.17-1.15.47-.3.31-.5.69-.5 1.11 0 .94.77 1.67 1.68 1.67.43 0 .83-.17 1.14-.47.3-.31.5-.69.5-1.11C17.32 3.73 16.56 3 15.65 3M5 6.5c-.66 0-1.27.26-1.73.7-.45.46-.72 1.07-.72 1.72C2.55 10.01 3.53 11 4.67 11c.65 0 1.26-.26 1.72-.7.45-.46.72-1.07.72-1.72C7.11 7.5 6.13 6.5 5 6.5m14 0c-.66 0-1.27.26-1.73.7-.45.46-.72 1.07-.72 1.72 0 1.09.98 2.08 2.12 2.08.65 0 1.26-.26 1.72-.7.45-.46.72-1.07.72-1.72 0-1.08-.98-2.08-2.11-2.08m-7 3c-2.35 0-4.23 1.88-4.53 4.26-.06.53.27.98.8.98h7.46c.53 0 .86-.45.8-.98C16.23 11.38 14.35 9.5 12 9.5m0 2.5c1.12 0 2.07.74 2.39 1.75H9.61c.32-1.01 1.27-1.75 2.39-1.75"/>
+              </svg>
+            </div>
+          </div>
+          <div class="py-6 px-6 md:px-8 bg-background md:-mx-8">
+            <p class="text-left md:text-center text-text leading-relaxed">
+              わんちゃんと一緒にみなさまが気持ちよく過ごしていただけるよう、いくつかお願いがあります。
+            </p>
+          </div>
+          <div class="px-8 py-8">
+            <ul class="space-y-4 text-text mb-8">
+            <li class="flex items-start gap-3">
+              <span class="text-accent mt-1 flex-shrink-0">•</span>
+              <span>店内ではリードの着用、またはキャリー・カートでの管理をお願いします</span>
+            </li>
+            <li class="flex items-start gap-3">
+              <span class="text-accent mt-1 flex-shrink-0">•</span>
+              <span>衛生面のためテーブルや椅子の上にペットを乗せることはご遠慮ください</span>
+            </li>
+            <li class="flex items-start gap-3">
+              <span class="text-accent mt-1 flex-shrink-0">•</span>
+              <span>吠え続けてしまう場合などは状況に応じてスタッフからお声がけすることがあります</span>
+            </li>
+            <li class="flex items-start gap-3">
+              <span class="text-accent mt-1 flex-shrink-0">•</span>
+              <span>マナーパンツ、マナーベルトの着用をおすすめしています</span>
+            </li>
+            <li class="flex items-start gap-3">
+              <span class="text-accent mt-1 flex-shrink-0">•</span>
+              <span>万が一、店内で粗相をしてしまった場合は、まず飼い主さまで一次対応をお願いいたします<br>
+              その後、必ずスタッフへお声がけください。最終的な清掃や消毒はスタッフが対応いたしますので、ご安心ください</span>
+            </li>
+            <li class="flex items-start gap-3">
+              <span class="text-accent mt-1 flex-shrink-0">•</span>
+              <span>写真撮影は可能ですが他のお客さまが写り込まないようご配慮をお願いいたします</span>
+            </li>
+          </ul>
+
+          <div class="text-left md:text-center py-6 px-8 bg-accent/15 -mx-8 -mb-8 mt-6">
+            <p class="text-text leading-relaxed">
+              ペットも人も安心して過ごせる空間を大切にしています。みなさまのご理解とご協力をお願いいたします。
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- 柔らかいセパレーター（波の線） -->
+      <div class="wave-divider my-12">
+        <svg viewBox="0 10 1200 20" preserveAspectRatio="none" class="w-full h-6">
+          <path d="M0,20 C200,40 400,0 600,20 C800,40 1000,0 1200,20 L1200,40 L0,40 Z"
+                fill="#C9A86C"
+                opacity="0.18"/>
+        </svg>
+      </div>
+
+      <!-- pome_ponkunのリード文（独立コンテナ） -->
+      <div class="container mx-auto px-6">
+        <div class="max-w-3xl mx-auto mb-8" data-aos="fade-up">
+          <p class="text-text leading-relaxed text-left">
+            Green Beans Coffeeがペット同伴営業を安心して続けられているのにはしっかりとした理由があります。
+          </p>
+          <p class="text-text leading-relaxed mt-4 text-left">
+            保健所の基準を遵守しながら衛生管理を徹底しているからこそ、ペット連れのお客さまもそうでないお客さまもみんなが安心して過ごせる空間になっています。Green Beans Coffeeの基本方針をご紹介します。
+          </p>
+        </div>
+
+        <!-- オーナーからのメッセージボックス -->
+        <div class="max-w-4xl mx-auto mt-8 bg-accent/10 border-2 border-accent rounded-xl shadow-xl overflow-hidden" data-aos="fade-up">
+          <!-- ヘッダー -->
+          <div class="bg-accent/20 py-6 px-8">
+            <div class="flex items-center justify-center gap-3">
+              <!-- Shield Check SVGアイコン -->
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-accent">
+                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10"/>
+                <path d="m9 12 2 2 4-4"/>
+              </svg>
+              <h3 class="text-xl md:text-2xl font-bold text-primary text-center">Green Beans Coffee<br class="md:hidden">の基本方針</h3>
+            </div>
+            <p class="text-[10px] md:text-sm text-secondary text-center mt-2">～保健所基準の遵守と衛生管理の徹底～</p>
+          </div>
+
+          <!-- 本文 -->
+          <div class="px-8 py-10 space-y-4 text-text leading-relaxed">
+            <p>Green Beans Coffeeでは2022年の開業当初から「ペットも家族の一員として一緒に過ごせる空間」を大切にし、店内ペット同伴可の営業を行っています。</p>
+
+            <p>私たちは保健所の基準内容を確認・遵守したうえで、日々の運営を行っています。具体的には、ペットはリード着用、またはキャリー・カートで管理し、調理エリアや食品提供エリアには立ち入らせない運用を徹底しています。また、テーブルや床、共有スペースについては定期的な清掃と消毒を実施しています。</p>
+
+            <p>万が一、店内で粗相が発生した場合は、飼い主さまによる一次対応を基本とし、その後、スタッフが最終的な清掃・消毒を行う体制を整えています。マナーパンツの着用をおすすめすることで衛生リスクの低減にも努めています。</p>
+
+            <p>なお、ペット用フードの提供は行っていません。
+            これは食品衛生管理を明確にし、すべてのお客さまに安心してご利用いただくための判断です。</p>
+
+            <p>ペット同伴のお客さまと動物が苦手な方やアレルギーをお持ちのお客さま、どちらにも配慮できるよう、席の配置やご案内方法についても状況に応じて調整しています。</p>
+
+            <p>これらの基本方針と運用を明確にすることで、安全性と衛生面、そしてお客さまの満足度を大切にしながら店内ペット同伴営業を継続しています。</p>
+          </div>
+
+          <!-- 署名 -->
+          <div class="px-8 pb-8">
+            <div class="text-right">
+              <p class="text-sm font-medium text-primary">Green Beans Coffee </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Wave Divider -->
+    <div class="wave-divider bg-gradient-to-b from-background to-white" style="transform: scaleY(-1);">
+      <svg viewBox="0 0 1200 60" preserveAspectRatio="none">
+        <path d="M0,30 C200,60 400,0 600,30 C800,60 1000,0 1200,30 L1200,60 L0,60 Z" fill="#ffffff"/>
+      </svg>
+    </div>
+
+    <!-- Cheki Booth Section -->
+    <section id="cheki-booth" class="py-20 bg-white">
+      <div class="container mx-auto px-4">
+        <h2 class="text-4xl md:text-5xl font-bold text-center text-primary mb-6" data-aos="fade-up">Cheki Booth</h2>
+        <p class="text-left md:text-center text-lg text-text mb-16 max-w-3xl mx-auto" data-aos="fade-up" data-aos-delay="100">
+          Green Beans Coffeeでは来店したペットの記念写真をチェキで撮影してくれます。<br class="hidden md:block">撮影は無料、スタッフさんが優しくサポートしてくれます。
+        </p>
+
+        <!-- Content Grid -->
+        <div class="flex flex-col lg:grid lg:grid-cols-3 gap-8 lg:items-start max-w-5xl mx-auto">
+          <!-- Image -->
+          <div data-aos="fade-right" class="relative w-full" style="padding-bottom: 177.78%;">
+            <img src="assets/images/cheki-booth/cheki-1.jpg"
+                 alt="Green Beans Coffeeのチェキブース。来店したペットの写真が壁一面に飾られています"
+                 class="absolute inset-0 w-full h-full object-cover object-top rounded-lg shadow-xl"
+                 loading="lazy"
+                 decoding="async">
+          </div>
+
+          <!-- Text Content -->
+          <div data-aos="fade-up">
+            <h3 class="text-2xl font-bold text-primary mb-6 text-center">チェキに関する<br>お店側のサービス</h3>
+            <div class="bg-background p-6 rounded-lg">
+              <ol class="space-y-3 text-text list-decimal list-inside">
+                <li class="leading-relaxed">記念チェキ撮影</li>
+                <li class="leading-relaxed">記念写真をチェキブースに展示</li>
+                <li class="leading-relaxed">
+                  インスタ投稿
+                  <ul class="ml-6 mt-2 space-y-1 list-disc list-inside text-sm">
+                    <li>ストーリーズ（24時間表示）</li>
+                    <li>ハイライト（約1ヶ月間）</li>
+                  </ul>
+                </li>
+              </ol>
+              <p class="text-sm text-text/80 mt-6 italic">
+                ※ チェキの無料サービスは比較的空いている時間帯のサービスになります。
+              </p>
+            </div>
+          </div>
+
+          <!-- YouTube Shorts: チェキブース動画 (インライン再生 / 終了後サムネイルに戻る) -->
+          <div class="w-full" data-aos="fade-left">
+            <div class="relative w-full rounded-lg shadow-lg overflow-hidden" style="padding-bottom: 177.78%;">
+              <!-- サムネイルオーバーレイ -->
+              <div id="chekiThumb" class="absolute inset-0 cursor-pointer group" onclick="playChekiInline()">
+                <img src="https://img.youtube.com/vi/XnktMIUsN4Q/maxresdefault.jpg"
+                     alt="チェキブース動画サムネイル"
+                     class="w-full h-full object-cover"
+                     loading="lazy" decoding="async">
+                <div class="absolute inset-0 flex items-center justify-center">
+                  <div class="bg-red-600 rounded-full w-16 h-16 flex items-center justify-center shadow-xl group-hover:scale-110 transition-transform duration-300">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="white" stroke="white" stroke-width="0">
+                      <polygon points="5 3 19 12 5 21 5 3"></polygon>
+                    </svg>
+                  </div>
+                </div>
+              </div>
+              <!-- YouTube iframe（再生ボタン押下後に表示） -->
+              <iframe id="chekiIframe"
+                class="absolute inset-0 w-full h-full"
+                src="index.html"
+                title="チェキブース"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowfullscreen
+                style="display:none;"></iframe>
+            </div>
+          </div>
+        </div>
+
+        <!-- 参加者の声 -->
+        <div class="mt-16">
+          <h3 class="text-2xl md:text-3xl font-bold text-center text-primary mb-8" data-aos="fade-up">
+            チェキブースを体験した方の声
+          </h3>
+
+          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-5xl mx-auto">
+            <!-- カード1: Ayaka -->
+            <div class="bg-background rounded-lg shadow-lg p-6" data-aos="fade-up">
+              <div class="flex items-center gap-3 mb-4">
+                <div class="w-12 h-12 rounded-full bg-secondary/20 flex items-center justify-center">
+                  <span class="text-primary font-bold text-lg">A</span>
+                </div>
+                <div>
+                  <p class="font-semibold text-primary">Ayaka</p>
+                  <p class="text-sm text-text/70">アンバサダー</p>
+                </div>
+              </div>
+              <p class="text-text leading-relaxed">
+                チェキブースでの撮影は毎回楽しみです。スタッフが上手にペットの表情を引き出すお手伝いをするので自然で可愛い写真が撮れます。壁に飾られたチェキを見るたびにたくさんのペットたちが愛されているんだなと感じます。
+              </p>
+            </div>
+
+            <!-- カード2: Mさん（プレースホルダー） -->
+            <div class="bg-background rounded-lg shadow-lg p-6" data-aos="fade-up" data-aos-delay="100">
+              <div class="flex items-center gap-3 mb-4">
+                <div class="w-12 h-12 rounded-full bg-secondary/20 flex items-center justify-center">
+                  <span class="text-primary font-bold text-lg">M</span>
+                </div>
+                <div>
+                  <p class="font-semibold text-primary">Mさん</p>
+                  <p class="text-sm text-text/70">常連のお客さま</p>
+                </div>
+              </div>
+              <p class="text-text leading-relaxed">
+                愛犬の可愛い写真が撮れて大満足！次回来店した時に壁に飾られているのを見つけるのが楽しみです。無料でこんなサービスがあるなんて嬉しいです。
+              </p>
+            </div>
+
+            <!-- カード3: Kさん（プレースホルダー） -->
+            <div class="bg-background rounded-lg shadow-lg p-6" data-aos="fade-up" data-aos-delay="200">
+              <div class="flex items-center gap-3 mb-4">
+                <div class="w-12 h-12 rounded-full bg-secondary/20 flex items-center justify-center">
+                  <span class="text-primary font-bold text-lg">K</span>
+                </div>
+                <div>
+                  <p class="font-semibold text-primary">Kさん</p>
+                  <p class="text-sm text-text/70">初めての来店</p>
+                </div>
+              </div>
+              <p class="text-text leading-relaxed">
+                初めての来店でしたが、スタッフさんが優しく対応してくださり、愛犬もリラックスして撮影できました。Instagramのストーリーズにもシェアしていただけるのが嬉しいポイントです。
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Wave Divider: Cheki Booth to Donate for Pets -->
+    <div class="wave-divider bg-white">
+      <svg viewBox="0 0 1200 60" preserveAspectRatio="none">
+        <path d="M0,30 C200,60 400,0 600,30 C800,60 1000,0 1200,30 L1200,60 L0,60 Z" fill="#FAF8F5"/>
+      </svg>
+    </div>
+
+    <!-- Donate for Pets Section -->
+    <section id="donate-for-pets" class="py-20 bg-[#FAF8F5]">
+      <div class="container mx-auto px-4">
+
+        <!-- Section Header -->
+        <h2 class="text-4xl md:text-5xl font-bold text-center text-primary mb-4" data-aos="fade-up">Donate for Pets</h2>
+        <p class="text-secondary text-center text-base mb-6" data-aos="fade-up" data-aos-delay="100">ペットの未来を支える募金</p>
+        <p class="text-left md:text-center text-base md:text-lg text-text mb-16 max-w-3xl mx-auto" data-aos="fade-up" data-aos-delay="200">
+          「都会で暮らすペットと一緒の時間をもっと自由に、もっと快適に」<br class="hidden md:block">
+          Green Beans Coffeeはワンちゃん同伴用アプリ <a href="https://wanpass.me/" target="_blank" rel="noopener noreferrer" class="text-secondary hover:text-primary transition-colors"><strong>Wan!Pass（ワンパス）</strong></a> に対応しています。
+        </p>
+
+        <!-- Wan!Pass Introduction: 2-column grid -->
+        <div class="grid md:grid-cols-2 gap-12 max-w-4xl mx-auto mb-16 items-center">
+
+          <!-- Left: QR code image -->
+          <div data-aos="fade-right">
+            <img src="assets/images/wanpass/qr-display.jpg" alt="店内に設置されたWan!PassのQRコード" class="rounded-lg shadow-xl w-full object-cover" loading="lazy" decoding="async">
+          </div>
+
+          <!-- Right: 3-step explanation -->
+          <div class="space-y-4" data-aos="fade-left" data-aos-delay="100">
+            <h3 class="text-2xl font-bold text-primary mb-3">仕組みはカンタン 3ステップ</h3>
+
+            <!-- Step 1 -->
+            <div class="flex items-start gap-4">
+              <div class="w-10 h-10 rounded-full flex items-center justify-center font-bold text-lg flex-shrink-0" style="background-color: rgba(255,255,255,0.9); border: 1px solid rgba(74,55,40,0.2); color: #4A3728;">1</div>
+              <div>
+                <p class="font-semibold text-primary mb-1">🐾 QRコードをスキャン</p>
+                <p class="text-text text-sm leading-relaxed">店内や店頭に設置されたWan!PassのQRコードをスマートフォンで読み取る</p>
+              </div>
+            </div>
+
+            <!-- Step 2 -->
+            <div class="flex items-start gap-4">
+              <div class="w-10 h-10 rounded-full flex items-center justify-center font-bold text-lg flex-shrink-0" style="background-color: rgba(255,255,255,0.9); border: 1px solid rgba(74,55,40,0.2); color: #4A3728;">2</div>
+              <div>
+                <p class="font-semibold text-primary mb-1">🐾 アクションが積み重なる</p>
+                <p class="text-text text-sm leading-relaxed">チェックイン・応援・閲覧などの実績がWan!Pass上に記録される</p>
+              </div>
+            </div>
+
+            <!-- Step 3 -->
+            <div class="flex items-start gap-4">
+              <div class="w-10 h-10 rounded-full flex items-center justify-center font-bold text-lg flex-shrink-0" style="background-color: rgba(255,255,255,0.9); border: 1px solid rgba(74,55,40,0.2); color: #4A3728;">3</div>
+              <div>
+                <p class="font-semibold text-primary mb-1">🐾 寄付につながる</p>
+                <p class="text-text text-sm leading-relaxed">積み重なった実績をもとに、Wan!Pass運営から動物保護団体へ寄付が行われる</p>
+              </div>
+            </div>
+
+            <!-- Note -->
+            <div class="pt-4" style="border-top: 1px solid rgba(74,55,40,0.12);">
+              <p class="text-text text-sm leading-relaxed">
+                お客様が直接お金を払う必要はありません。<br>
+                <strong class="text-primary">「読み取るだけ」「利用するだけ」で募金につながります。</strong>
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- GBC Message Box -->
+        <div class="rounded-2xl p-8 md:p-12 max-w-4xl mx-auto mb-16" style="background-color: rgba(255,255,255,0.75); border: 1px solid rgba(74,55,40,0.08); box-shadow: 0 4px 24px rgba(74,55,40,0.06);" data-aos="fade-up">
+          <blockquote class="text-center mb-5">
+            <p class="text-xl md:text-2xl font-bold text-primary leading-relaxed mb-4">
+              「Green Beans Coffeeへの来店＝動物福祉への応援」
+            </p>
+            <p class="text-text leading-relaxed mb-2 text-left md:text-center">
+              カフェを利用する行為そのものが動物福祉への社会貢献につながっています。
+            </p>
+            <p class="text-secondary italic text-sm text-left md:text-center">
+              コーヒーや空間だけでなく、想いの循環も提供できる場所でありたい。— Green Beans Coffee
+            </p>
+          </blockquote>
+
+          <!-- 3 initiatives -->
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mt-5">
+            <div class="text-center rounded-xl py-3 px-4" style="background-color: #FAF8F5; border: 1px solid rgba(74,55,40,0.1); border-top: 2px solid rgba(201,168,108,0.4);">
+              <p class="text-sm font-semibold text-primary">ペット同伴ルールの<br>可視化</p>
+            </div>
+            <div class="text-center rounded-xl py-3 px-4" style="background-color: #FAF8F5; border: 1px solid rgba(74,55,40,0.1); border-top: 2px solid rgba(201,168,108,0.4);">
+              <p class="text-sm font-semibold text-primary">飼い主の<br>マナー意識向上</p>
+            </div>
+            <div class="text-center rounded-xl py-3 px-4" style="background-color: #FAF8F5; border: 1px solid rgba(74,55,40,0.1); border-top: 2px solid rgba(201,168,108,0.4);">
+              <p class="text-sm font-semibold text-primary">動物福祉への<br>継続的な支援</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Japan Rescue Association Donation Box - subtle addition -->
+        <div class="max-w-4xl mx-auto" data-aos="fade-up">
+          <div class="flex flex-col md:flex-row items-center gap-8">
+            <div class="w-full md:w-48 flex-shrink-0">
+              <img src="assets/images/wanpass/donation-box.jpg" alt="店内に設置された日本レスキュー協会の募金箱" class="rounded-lg shadow-lg w-full object-cover" loading="lazy" decoding="async">
+            </div>
+            <div class="text-left">
+              <p class="text-xs font-semibold tracking-widest mb-2" style="color: #8B7355;">ALSO IN THE STORE</p>
+              <p class="font-semibold text-primary mb-2">日本レスキュー協会の募金箱も設置してあります</p>
+              <p class="text-sm leading-relaxed" style="color: rgba(45,42,38,0.75);">
+                動物福祉・災害救助犬・セラピードッグへの支援を行う<strong>日本レスキュー協会</strong>のサポーターとして、店内に募金箱を設置。コーヒーを飲みながら、ふと思ったときに。
+              </p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Wave Divider: Donate for Pets to Visit Diary -->
+    <div class="wave-divider" style="background-color: #FAF8F5;">
+      <svg viewBox="0 0 1200 60" preserveAspectRatio="none">
+        <path d="M0,30 C200,60 400,0 600,30 C800,60 1000,0 1200,30 L1200,60 L0,60 Z" fill="#ffffff"/>
+      </svg>
+    </div>
+
+    <!-- Visit Diary Section -->
+    <section id="visit-diary" class="py-20 bg-white">
+      <div class="container mx-auto px-4">
+        <h2 class="text-4xl md:text-5xl font-bold text-center text-primary mb-6" data-aos="fade-up">Visit Diary</h2>
+        <p class="text-left md:text-center text-lg text-text mb-16 max-w-3xl mx-auto" data-aos="fade-up" data-aos-delay="100">
+          私と愛犬のポンがGreen Beans Coffeeに通って見つけた魅力。<br class="hidden md:block">ペットと過ごす特別な時間を記録しています。
+        </p>
+
+        <!-- Diary Cards -->
+        <div class="max-w-4xl mx-auto space-y-8">
+          <!-- Diary #1 -->
+          <div class="bg-background rounded-lg shadow-lg overflow-hidden playful-card" data-aos="fade-up">
+            <div class="md:flex">
+              <div class="md:w-1/3">
+                <img src="assets/images/visit-diary/visit-pon-1.jpg"
+                     alt="初めての訪問 - ポンとGreen Beans Coffee"
+                     class="w-full h-64 md:h-full object-cover"
+                     loading="lazy"
+                     decoding="async">
+              </div>
+              <div class="p-8 md:w-2/3">
+                <h3 class="text-2xl font-bold text-primary mb-2">初めての訪問</h3>
+                <p class="text-sm text-secondary mb-4">2023年 8月20日</p>
+                <p class="text-text leading-relaxed">
+                  入り口に美しく並んだコーヒーのディスプレイに胸が躍りました。店員さんもフレンドリーに対応してくださり、ペットと一緒に店内を利用できるので、外が厳しい暑さの夏でも、愛犬と涼しく快適に過ごせたことに感動しました。この日はアイスアメリカーノを注文。浅煎りで酸味が効いていて、夏の午後にぴったりでした。GBCのコーヒーがきっかけでコーヒーは浅煎り派になりました。
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Diary #2 -->
+          <div class="bg-background rounded-lg shadow-lg overflow-hidden playful-card" data-aos="fade-up">
+            <div class="md:flex md:flex-row-reverse">
+              <div class="md:w-1/3">
+                <img src="assets/images/visit-diary/visit-pon-2.jpg"
+                     alt="GBCスタッフとして働き始める - ポンと一緒に同伴出勤"
+                     class="w-full h-64 md:h-full object-cover"
+                     loading="lazy"
+                     decoding="async">
+              </div>
+              <div class="p-8 md:w-2/3">
+                <h3 class="text-2xl font-bold text-primary mb-2">GBCスタッフとして働き始める</h3>
+                <p class="text-sm text-secondary mb-4">2023年 8月下旬</p>
+                <p class="text-text leading-relaxed">
+                  「もっと長く愛犬と一緒に過ごしたい」と考えていたところ、愛犬ポンとの同伴出勤を快く受け入れていただけたことが決め手となりスタッフとして働き始めました。ポンに会うために来てくださるお客さまもいらっしゃってとても楽しく働けました。
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Diary #3 -->
+          <div class="bg-background rounded-lg shadow-lg overflow-hidden playful-card" data-aos="fade-up">
+            <div class="md:flex">
+              <div class="md:w-1/3">
+                <img src="assets/images/visit-diary/visit-pon-3.jpg"
+                     alt="ポン誕生祭イベント - 2歳のお誕生日をGreen Beans Coffeeで"
+                     class="w-full h-64 md:h-full object-cover"
+                     loading="lazy"
+                     decoding="async">
+              </div>
+              <div class="p-8 md:w-2/3">
+                <h3 class="text-2xl font-bold text-primary mb-2">ポン誕生祭イベント</h3>
+                <p class="text-sm text-secondary mb-4">2024年 11月</p>
+                <p class="text-text leading-relaxed mb-6">
+                  ポンが2歳のお誕生日を迎えるということで、Green Beans Coffeeでポン誕生祭を催していただきました。たくさんのわんちゃんが来店してくれてポンも大喜びでした。
+                </p>
+                <div class="text-right">
+                  <button id="openGalleryBtn" class="inline-flex items-center gap-2 bg-primary hover:bg-secondary text-white px-6 py-2.5 rounded-lg transition duration-300 shadow-md hover:shadow-lg">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                      <rect width="18" height="18" x="3" y="3" rx="2" ry="2"/>
+                      <circle cx="9" cy="9" r="2"/>
+                      <path d="m21 15-3.086-3.086a2 2 0 0 0-2.828 0L6 21"/>
+                    </svg>
+                    イベントの写真を見る
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Wave Divider -->
+    <div class="wave-divider bg-white">
+      <svg viewBox="0 0 1200 60" preserveAspectRatio="none">
+        <path d="M0,30 C200,60 400,0 600,30 C800,60 1000,0 1200,30 L1200,60 L0,60 Z" fill="#FAF8F5"/>
+      </svg>
+    </div>
+    <!-- Access Section -->
+    <section id="access" class="py-20 bg-gradient-to-b from-background to-white">
+      <div class="container mx-auto px-4">
+        <h2 class="text-4xl md:text-5xl font-bold text-center text-primary mb-6" data-aos="fade-up">Access</h2>
+        <p class="text-left md:text-center text-lg text-text mb-16 max-w-3xl mx-auto" data-aos="fade-up" data-aos-delay="100">
+          Green Beans Coffeeは都内有数のパワースポットに囲まれたダガヤサンドウエリア。<br class="hidden md:block">愛犬とのお散歩コースとしてもおすすめです。
+
+        </p>
+
+        <div class="grid md:grid-cols-2 gap-12 max-w-5xl mx-auto">
+          <!-- Map -->
+          <div data-aos="fade-right">
+            <div class="rounded-lg overflow-hidden shadow-xl h-96">
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3240.883747384944!2d139.7052597!3d35.677521!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60188d4404ef151f%3A0x85142d57557d0f87!2z44Kw44Oq44O844Oz44OT44O844Oz44K644Kz44O844OL44O8!5e0!3m2!1sja!2sjp!4v1234567890123!5m2!1sja!2sjp"
+                width="100%"
+                height="100%"
+                style="border:0;"
+                allowfullscreen=""
+                loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade">
+              </iframe>
+            </div>
+          </div>
+
+          <!-- Access Info -->
+          <div class="space-y-6" data-aos="fade-left">
+            <div>
+              <h3 class="text-xl font-bold text-primary mb-3 flex items-center gap-2">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
+                  <polyline points="9 22 9 12 15 12 15 22"></polyline>
+                </svg>
+                住所
+              </h3>
+              <p class="text-text pl-8">
+                〒151-0051<br>
+                東京都渋谷区千駄ヶ谷3-30-1<br>
+                RC APARTMENT 1階
+              </p>
+            </div>
+
+            <div>
+              <h3 class="text-xl font-bold text-primary mb-3 flex items-center gap-2">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <circle cx="12" cy="12" r="8"></circle>
+                  <path d="M12 2v7.5"></path>
+                  <path d="m19 5-5.23 5.23"></path>
+                  <path d="M22 12h-7.5"></path>
+                </svg>
+                アクセス
+              </h3>
+              <ul class="text-text pl-8 space-y-2">
+                <li>• 東京メトロ副都心線 <strong>北参道駅</strong> 徒歩3分</li>
+                <li>• JR総武線 <strong>千駄ヶ谷駅</strong> 徒歩7分</li>
+                <li>• 都営大江戸線 <strong>国立競技場駅</strong> 徒歩7分</li>
+                <li>• JR山手線 <strong>代々木駅</strong> 徒歩11分</li>
+                <li>• JR山手線 <strong>原宿駅</strong> 徒歩11分</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <!-- Power Spot Walking Guide -->
+        <div class="max-w-5xl mx-auto mt-12" data-aos="fade-up">
+          <div class="bg-gradient-to-r from-primary/5 to-primary/10 rounded-xl p-8 shadow-xl border-2 border-primary/20">
+            <h3 class="text-xl md:text-2xl font-bold text-primary mb-6 text-center flex items-center justify-center gap-2">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-primary">
+                <path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/>
+                <circle cx="12" cy="10" r="3"/>
+              </svg>
+              愛犬と巡る<br class="md:hidden">パワースポット散歩エリア
+            </h3>
+            <p class="text-text leading-relaxed mb-6 text-left md:text-center">
+              ダガヤサンドウには愛犬とお散歩するのに最適なパワースポットが数多くあります。
+            
+            
+            </p>
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-6">
+              <div class="bg-white/70 rounded-lg p-5 flex items-start gap-4">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-accent flex-shrink-0 mt-1">
+                  <path d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z"/>
+                </svg>
+                <div>
+                  <h4 class="font-bold text-primary mb-1">鳩森八幡神社<br>（徒歩約5分）</h4>
+                  <p class="text-sm text-text">都内屈指のパワースポット
+                
+                  </p>
+                </div>
+              </div>
+              <div class="bg-white/70 rounded-lg p-5 flex items-start gap-4">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-accent flex-shrink-0 mt-1">
+                  <path d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z"/>
+                </svg>
+                <div>
+                  <h4 class="font-bold text-primary mb-1">国立競技場<br>（徒歩約5分）</h4>
+                  <p class="text-sm text-text">開放的な空間で気分爽快</p>
+                </div>
+              </div>
+              <div class="bg-white/70 rounded-lg p-5 flex items-start gap-4">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-accent flex-shrink-0 mt-1">
+                  <path d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z"/>
+                </svg>
+                <div>
+                  <h4 class="font-bold text-primary mb-1">新宿御苑<br>（徒歩約10分）</h4>
+                  <p class="text-sm text-text">広大な庭園でのびのび散歩</p>
+                </div>
+              </div>
+              <div class="bg-white/70 rounded-lg p-5 flex items-start gap-4">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-accent flex-shrink-0 mt-1">
+                  <path d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z"/>
+                </svg>
+                <div>
+                  <h4 class="font-bold text-primary mb-1">明治神宮<br>（徒歩約15分）</h4>
+                  <p class="text-sm text-text">神聖な森に包まれる癒しの空間</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Ambassador's Recommendation -->
+        <div class="max-w-5xl mx-auto mt-20" data-aos="fade-up">
+          <div class="bg-gradient-to-r from-primary/5 to-primary/10 rounded-xl p-8 shadow-xl border-2 border-primary/20">
+            <h3 class="text-xl md:text-2xl font-bold text-primary mb-6 text-center flex items-center justify-center gap-2">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-accent">
+                <path d="M12 20a8 8 0 1 0 0-16 8 8 0 0 0 0 16Z"/>
+                <path d="M12 14a2 2 0 1 0 0-4 2 2 0 0 0 0 4Z"/>
+                <path d="M12 2v2"/>
+                <path d="M12 20v2"/>
+                <path d="m4.93 4.93 1.41 1.41"/>
+                <path d="m17.66 17.66 1.41 1.41"/>
+                <path d="M2 12h2"/>
+                <path d="M20 12h2"/>
+                <path d="m6.34 17.66-1.41 1.41"/>
+                <path d="m19.07 4.93-1.41 1.41"/>
+              </svg>
+              アンバサダーAyakaの<br class="md:hidden">おすすめの楽しみ方
+            </h3>
+            <div class="bg-white/50 rounded-lg p-6">
+              <div class="grid md:grid-cols-3 gap-6 items-center">
+                <!-- テキスト＋署名 -->
+                <div>
+                  <p class="text-text leading-relaxed mb-4">
+                    ペット同伴でも気兼ねなく本格的なスペシャルティコーヒーとグルテンフリーランチを楽しめるのがGreen Beans Coffeeの最大の魅力です。
+                  </p>
+                  <p class="text-text leading-relaxed mb-4">
+                    ペット連れの友人とカフェで集まり、お洒落なショップが並ぶダガヤサンドウ（北参道・千駄ヶ谷エリア）を探索したり、広々とした明治公園や国立競技場近辺をお散歩したりするのが私のイチオシのコースです！
+                  </p>
+                  <p class="text-right text-sm font-semibold text-primary mt-6">
+                    GBCペットアンバサダー Ayaka
+                  </p>
+                </div>
+                <!-- 動画1: 7eylDMwdLoE -->
+                <div class="relative w-full rounded-xl shadow-lg overflow-hidden" style="padding-bottom: 177.78%;">
+                  <div id="accessThumb1" class="absolute inset-0 cursor-pointer group"
+                       onclick="playInlineVideo('accessThumb1','accessIframe1','7eylDMwdLoE')">
+                    <img src="https://img.youtube.com/vi/7eylDMwdLoE/maxresdefault.jpg"
+                         alt="お散歩コース動画1"
+                         class="w-full h-full object-cover"
+                         loading="lazy" decoding="async">
+                    <div class="absolute inset-0 flex items-center justify-center">
+                      <div class="bg-red-600 rounded-full w-12 h-12 flex items-center justify-center shadow-xl group-hover:scale-110 transition-transform duration-300">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="white" stroke="white" stroke-width="0">
+                          <polygon points="5 3 19 12 5 21 5 3"></polygon>
+                        </svg>
+                      </div>
+                    </div>
+                  </div>
+                  <iframe id="accessIframe1" class="absolute inset-0 w-full h-full" src="index.html"
+                    title="お散歩コース1" frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    allowfullscreen style="display:none;"></iframe>
+                </div>
+                <!-- 動画2: IEejKgF0O6U -->
+                <div class="relative w-full rounded-xl shadow-lg overflow-hidden" style="padding-bottom: 177.78%;">
+                  <div id="accessThumb2" class="absolute inset-0 cursor-pointer group"
+                       onclick="playInlineVideo('accessThumb2','accessIframe2','IEejKgF0O6U')">
+                    <img src="https://img.youtube.com/vi/IEejKgF0O6U/maxresdefault.jpg"
+                         alt="お散歩コース動画2"
+                         class="w-full h-full object-cover"
+                         loading="lazy" decoding="async">
+                    <div class="absolute inset-0 flex items-center justify-center">
+                      <div class="bg-red-600 rounded-full w-12 h-12 flex items-center justify-center shadow-xl group-hover:scale-110 transition-transform duration-300">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="white" stroke="white" stroke-width="0">
+                          <polygon points="5 3 19 12 5 21 5 3"></polygon>
+                        </svg>
+                      </div>
+                    </div>
+                  </div>
+                  <iframe id="accessIframe2" class="absolute inset-0 w-full h-full" src="index.html"
+                    title="お散歩コース2" frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    allowfullscreen style="display:none;"></iframe>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Wave Divider -->
+    <div class="wave-divider bg-gradient-to-b from-background to-white" style="transform: scaleY(-1);">
+      <svg viewBox="0 0 1200 60" preserveAspectRatio="none">
+        <path d="M0,30 C200,60 400,0 600,30 C800,60 1000,0 1200,30 L1200,60 L0,60 Z" fill="#ffffff"/>
+      </svg>
+    </div>
+
+    <!-- FAQ Section -->
+    <section id="faq" class="py-20 bg-gradient-to-b from-background to-white">
+      <div class="container mx-auto px-4">
+        <h2 class="text-4xl md:text-5xl font-bold text-center text-primary mb-16" data-aos="fade-up">FAQ</h2>
+
+        <div class="max-w-4xl mx-auto space-y-4">
+          <p class="text-left md:text-center text-lg leading-relaxed mb-12 max-w-3xl mx-auto" data-aos="fade-up">
+            ペット同伴でGreen Beans Coffeeを利用する際のFAQです。<br class="hidden md:block">ペットアンバサダーが実際にお店で確認した情報をもとにまとめました。
+          </p>
+
+          <!-- Paw decoration -->
+          <div class="flex justify-center items-end gap-3 py-4" data-aos="fade-up">
+            <svg width="24" height="24" viewBox="0 0 24 15" fill="#C9A86C" opacity="0.35" style="transform: rotate(-12deg)"><path d="M8.35 3c-.44 0-.84.17-1.15.47-.3.31-.5.69-.5 1.11 0 .94.77 1.67 1.68 1.67.43 0 .83-.17 1.14-.47.3-.31.5-.69.5-1.11C10 3.73 9.24 3 8.35 3m7.3 0c-.44 0-.84.17-1.15.47-.3.31-.5.69-.5 1.11 0 .94.77 1.67 1.68 1.67.43 0 .83-.17 1.14-.47.3-.31.5-.69.5-1.11C17.32 3.73 16.56 3 15.65 3M5 6.5c-.66 0-1.27.26-1.73.7-.45.46-.72 1.07-.72 1.72C2.55 10.01 3.53 11 4.67 11c.65 0 1.26-.26 1.72-.7.45-.46.72-1.07.72-1.72C7.11 7.5 6.13 6.5 5 6.5m14 0c-.66 0-1.27.26-1.73.7-.45.46-.72 1.07-.72 1.72 0 1.09.98 2.08 2.12 2.08.65 0 1.26-.26 1.72-.7.45-.46.72-1.07.72-1.72 0-1.08-.98-2.08-2.11-2.08m-7 3c-2.35 0-4.23 1.88-4.53 4.26-.06.53.27.98.8.98h7.46c.53 0 .86-.45.8-.98C16.23 11.38 14.35 9.5 12 9.5m0 2.5c1.12 0 2.07.74 2.39 1.75H9.61c.32-1.01 1.27-1.75 2.39-1.75"/></svg>
+            <svg width="32" height="32" viewBox="0 0 24 15" fill="#C9A86C" opacity="0.55"><path d="M8.35 3c-.44 0-.84.17-1.15.47-.3.31-.5.69-.5 1.11 0 .94.77 1.67 1.68 1.67.43 0 .83-.17 1.14-.47.3-.31.5-.69.5-1.11C10 3.73 9.24 3 8.35 3m7.3 0c-.44 0-.84.17-1.15.47-.3.31-.5.69-.5 1.11 0 .94.77 1.67 1.68 1.67.43 0 .83-.17 1.14-.47.3-.31.5-.69.5-1.11C17.32 3.73 16.56 3 15.65 3M5 6.5c-.66 0-1.27.26-1.73.7-.45.46-.72 1.07-.72 1.72C2.55 10.01 3.53 11 4.67 11c.65 0 1.26-.26 1.72-.7.45-.46.72-1.07.72-1.72C7.11 7.5 6.13 6.5 5 6.5m14 0c-.66 0-1.27.26-1.73.7-.45.46-.72 1.07-.72 1.72 0 1.09.98 2.08 2.12 2.08.65 0 1.26-.26 1.72-.7.45-.46.72-1.07.72-1.72 0-1.08-.98-2.08-2.11-2.08m-7 3c-2.35 0-4.23 1.88-4.53 4.26-.06.53.27.98.8.98h7.46c.53 0 .86-.45.8-.98C16.23 11.38 14.35 9.5 12 9.5m0 2.5c1.12 0 2.07.74 2.39 1.75H9.61c.32-1.01 1.27-1.75 2.39-1.75"/></svg>
+            <svg width="24" height="24" viewBox="0 0 24 15" fill="#C9A86C" opacity="0.35" style="transform: rotate(12deg)"><path d="M8.35 3c-.44 0-.84.17-1.15.47-.3.31-.5.69-.5 1.11 0 .94.77 1.67 1.68 1.67.43 0 .83-.17 1.14-.47.3-.31.5-.69.5-1.11C10 3.73 9.24 3 8.35 3m7.3 0c-.44 0-.84.17-1.15.47-.3.31-.5.69-.5 1.11 0 .94.77 1.67 1.68 1.67.43 0 .83-.17 1.14-.47.3-.31.5-.69.5-1.11C17.32 3.73 16.56 3 15.65 3M5 6.5c-.66 0-1.27.26-1.73.7-.45.46-.72 1.07-.72 1.72C2.55 10.01 3.53 11 4.67 11c.65 0 1.26-.26 1.72-.7.45-.46.72-1.07.72-1.72C7.11 7.5 6.13 6.5 5 6.5m14 0c-.66 0-1.27.26-1.73.7-.45.46-.72 1.07-.72 1.72 0 1.09.98 2.08 2.12 2.08.65 0 1.26-.26 1.72-.7.45-.46.72-1.07.72-1.72 0-1.08-.98-2.08-2.11-2.08m-7 3c-2.35 0-4.23 1.88-4.53 4.26-.06.53.27.98.8.98h7.46c.53 0 .86-.45.8-.98C16.23 11.38 14.35 9.5 12 9.5m0 2.5c1.12 0 2.07.74 2.39 1.75H9.61c.32-1.01 1.27-1.75 2.39-1.75"/></svg>
+          </div>
+
+          <!-- FAQ Item #1 -->
+          <details class="bg-background rounded-lg shadow group" data-aos="fade-up">
+            <summary class="p-4 cursor-pointer font-bold text-primary hover:text-accent transition flex justify-between items-center">
+              <span>Q1. Green Beans Coffeeはどんなカフェですか？</span>
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 transition-transform group-open:rotate-180 flex-shrink-0" viewBox="0 0 24 15" fill="#C9A86C">
+                <path d="M8.35 3c-.44 0-.84.17-1.15.47-.3.31-.5.69-.5 1.11 0 .94.77 1.67 1.68 1.67.43 0 .83-.17 1.14-.47.3-.31.5-.69.5-1.11C10 3.73 9.24 3 8.35 3m7.3 0c-.44 0-.84.17-1.15.47-.3.31-.5.69-.5 1.11 0 .94.77 1.67 1.68 1.67.43 0 .83-.17 1.14-.47.3-.31.5-.69.5-1.11C17.32 3.73 16.56 3 15.65 3M5 6.5c-.66 0-1.27.26-1.73.7-.45.46-.72 1.07-.72 1.72C2.55 10.01 3.53 11 4.67 11c.65 0 1.26-.26 1.72-.7.45-.46.72-1.07.72-1.72C7.11 7.5 6.13 6.5 5 6.5m14 0c-.66 0-1.27.26-1.73.7-.45.46-.72 1.07-.72 1.72 0 1.09.98 2.08 2.12 2.08.65 0 1.26-.26 1.72-.7.45-.46.72-1.07.72-1.72 0-1.08-.98-2.08-2.11-2.08m-7 3c-2.35 0-4.23 1.88-4.53 4.26-.06.53.27.98.8.98h7.46c.53 0 .86-.45.8-.98C16.23 11.38 14.35 9.5 12 9.5m0 2.5c1.12 0 2.07.74 2.39 1.75H9.61c.32-1.01 1.27-1.75 2.39-1.75"/>
+              </svg>
+            </summary>
+            <div class="p-4 pt-0 text-text">
+              <p>2022年のオープン当初から店内ペット同伴OKを続けているコーヒー専門店です。自家焙煎コーヒーやハンドドリップに力を入れながらペットも家族の一員として一緒に過ごせる空間づくりを大切にしています。記念チェキ撮影やフォトブース展示など、お客さまの思い出づくりへの取り組みも特徴のひとつです。</p>
+            </div>
+          </details>
+
+          <!-- FAQ Item #2 -->
+          <details class="bg-background rounded-lg shadow group" data-aos="fade-up">
+            <summary class="p-4 cursor-pointer font-bold text-primary hover:text-accent transition flex justify-between items-center">
+              <span>Q2. Green Beans Coffeeはペット同伴できますか？</span>
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 transition-transform group-open:rotate-180 flex-shrink-0" viewBox="0 0 24 15" fill="#C9A86C">
+                <path d="M8.35 3c-.44 0-.84.17-1.15.47-.3.31-.5.69-.5 1.11 0 .94.77 1.67 1.68 1.67.43 0 .83-.17 1.14-.47.3-.31.5-.69.5-1.11C10 3.73 9.24 3 8.35 3m7.3 0c-.44 0-.84.17-1.15.47-.3.31-.5.69-.5 1.11 0 .94.77 1.67 1.68 1.67.43 0 .83-.17 1.14-.47.3-.31.5-.69.5-1.11C17.32 3.73 16.56 3 15.65 3M5 6.5c-.66 0-1.27.26-1.73.7-.45.46-.72 1.07-.72 1.72C2.55 10.01 3.53 11 4.67 11c.65 0 1.26-.26 1.72-.7.45-.46.72-1.07.72-1.72C7.11 7.5 6.13 6.5 5 6.5m14 0c-.66 0-1.27.26-1.73.7-.45.46-.72 1.07-.72 1.72 0 1.09.98 2.08 2.12 2.08.65 0 1.26-.26 1.72-.7.45-.46.72-1.07.72-1.72 0-1.08-.98-2.08-2.11-2.08m-7 3c-2.35 0-4.23 1.88-4.53 4.26-.06.53.27.98.8.98h7.46c.53 0 .86-.45.8-.98C16.23 11.38 14.35 9.5 12 9.5m0 2.5c1.12 0 2.07.74 2.39 1.75H9.61c.32-1.01 1.27-1.75 2.39-1.75"/>
+              </svg>
+            </summary>
+            <div class="p-4 pt-0 text-text">
+              <p>はい、ペット同伴可能です。Green Beans Coffeeは北参道・千駄ケ谷エリアでは珍しく店内までペット同伴OKのカフェです。「北参道 ペット可 カフェ」「千駄ヶ谷 ペット可 カフェ」で検索して来店される方も多いです。雨の日や暑い日、寒い日でも、わんちゃんと一緒に安心して過ごしていただけます。</p>
+            </div>
+          </details>
+
+          <!-- FAQ Item #3 -->
+          <details class="bg-background rounded-lg shadow group" data-aos="fade-up">
+            <summary class="p-4 cursor-pointer font-bold text-primary hover:text-accent transition flex justify-between items-center">
+              <span>Q3. 雨の日でもペット同伴で利用できますか？</span>
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 transition-transform group-open:rotate-180 flex-shrink-0" viewBox="0 0 24 15" fill="#C9A86C">
+                <path d="M8.35 3c-.44 0-.84.17-1.15.47-.3.31-.5.69-.5 1.11 0 .94.77 1.67 1.68 1.67.43 0 .83-.17 1.14-.47.3-.31.5-.69.5-1.11C10 3.73 9.24 3 8.35 3m7.3 0c-.44 0-.84.17-1.15.47-.3.31-.5.69-.5 1.11 0 .94.77 1.67 1.68 1.67.43 0 .83-.17 1.14-.47.3-.31.5-.69.5-1.11C17.32 3.73 16.56 3 15.65 3M5 6.5c-.66 0-1.27.26-1.73.7-.45.46-.72 1.07-.72 1.72C2.55 10.01 3.53 11 4.67 11c.65 0 1.26-.26 1.72-.7.45-.46.72-1.07.72-1.72C7.11 7.5 6.13 6.5 5 6.5m14 0c-.66 0-1.27.26-1.73.7-.45.46-.72 1.07-.72 1.72 0 1.09.98 2.08 2.12 2.08.65 0 1.26-.26 1.72-.7.45-.46.72-1.07.72-1.72 0-1.08-.98-2.08-2.11-2.08m-7 3c-2.35 0-4.23 1.88-4.53 4.26-.06.53.27.98.8.98h7.46c.53 0 .86-.45.8-.98C16.23 11.38 14.35 9.5 12 9.5m0 2.5c1.12 0 2.07.74 2.39 1.75H9.61c.32-1.01 1.27-1.75 2.39-1.75"/>
+              </svg>
+            </summary>
+            <div class="p-4 pt-0 text-text">
+              <p>はい、利用できます。店内ペット同伴OKのため天候に左右されずご利用いただけます。特に梅雨や夏場は「店内OKで助かりました」というお声を多くいただいています。</p>
+            </div>
+          </details>
+
+          <!-- FAQ Item #4 -->
+          <details class="bg-background rounded-lg shadow group" data-aos="fade-up">
+            <summary class="p-4 cursor-pointer font-bold text-primary hover:text-accent transition flex justify-between items-center">
+              <span>Q4. ペット同伴は初めてなんですけど大丈夫ですか？</span>
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 transition-transform group-open:rotate-180 flex-shrink-0" viewBox="0 0 24 15" fill="#C9A86C">
+                <path d="M8.35 3c-.44 0-.84.17-1.15.47-.3.31-.5.69-.5 1.11 0 .94.77 1.67 1.68 1.67.43 0 .83-.17 1.14-.47.3-.31.5-.69.5-1.11C10 3.73 9.24 3 8.35 3m7.3 0c-.44 0-.84.17-1.15.47-.3.31-.5.69-.5 1.11 0 .94.77 1.67 1.68 1.67.43 0 .83-.17 1.14-.47.3-.31.5-.69.5-1.11C17.32 3.73 16.56 3 15.65 3M5 6.5c-.66 0-1.27.26-1.73.7-.45.46-.72 1.07-.72 1.72C2.55 10.01 3.53 11 4.67 11c.65 0 1.26-.26 1.72-.7.45-.46.72-1.07.72-1.72C7.11 7.5 6.13 6.5 5 6.5m14 0c-.66 0-1.27.26-1.73.7-.45.46-.72 1.07-.72 1.72 0 1.09.98 2.08 2.12 2.08.65 0 1.26-.26 1.72-.7.45-.46.72-1.07.72-1.72 0-1.08-.98-2.08-2.11-2.08m-7 3c-2.35 0-4.23 1.88-4.53 4.26-.06.53.27.98.8.98h7.46c.53 0 .86-.45.8-.98C16.23 11.38 14.35 9.5 12 9.5m0 2.5c1.12 0 2.07.74 2.39 1.75H9.61c.32-1.01 1.27-1.75 2.39-1.75"/>
+              </svg>
+            </summary>
+            <div class="p-4 pt-0 text-text">
+              <p>はい、大丈夫です。初めてペット同伴で来店される方も多くいらっしゃいます。入店時に不安な点があればスタッフが自然にお声がけしますのでご安心ください。「何に気をつけたらいいか分からない」という方にも無理なく過ごしていただけるようスタッフがサポートしています。私自身も最初は同じ気持ちでした。</p>
+            </div>
+          </details>
+
+          <!-- FAQ Item #5 -->
+          <details class="bg-background rounded-lg shadow group" data-aos="fade-up">
+            <summary class="p-4 cursor-pointer font-bold text-primary hover:text-accent transition flex justify-between items-center">
+              <span>Q5. ペット同伴の場合、予約は必要ですか？</span>
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 transition-transform group-open:rotate-180 flex-shrink-0" viewBox="0 0 24 15" fill="#C9A86C">
+                <path d="M8.35 3c-.44 0-.84.17-1.15.47-.3.31-.5.69-.5 1.11 0 .94.77 1.67 1.68 1.67.43 0 .83-.17 1.14-.47.3-.31.5-.69.5-1.11C10 3.73 9.24 3 8.35 3m7.3 0c-.44 0-.84.17-1.15.47-.3.31-.5.69-.5 1.11 0 .94.77 1.67 1.68 1.67.43 0 .83-.17 1.14-.47.3-.31.5-.69.5-1.11C17.32 3.73 16.56 3 15.65 3M5 6.5c-.66 0-1.27.26-1.73.7-.45.46-.72 1.07-.72 1.72C2.55 10.01 3.53 11 4.67 11c.65 0 1.26-.26 1.72-.7.45-.46.72-1.07.72-1.72C7.11 7.5 6.13 6.5 5 6.5m14 0c-.66 0-1.27.26-1.73.7-.45.46-.72 1.07-.72 1.72 0 1.09.98 2.08 2.12 2.08.65 0 1.26-.26 1.72-.7.45-.46.72-1.07.72-1.72 0-1.08-.98-2.08-2.11-2.08m-7 3c-2.35 0-4.23 1.88-4.53 4.26-.06.53.27.98.8.98h7.46c.53 0 .86-.45.8-.98C16.23 11.38 14.35 9.5 12 9.5m0 2.5c1.12 0 2.07.74 2.39 1.75H9.61c.32-1.01 1.27-1.75 2.39-1.75"/>
+              </svg>
+            </summary>
+            <div class="p-4 pt-0 text-text">
+              <p>必須ではありませんが、店内でゆっくり過ごしたい場合は事前のお電話予約をおすすめしています。混雑状況に合わせてお席をご案内できます。電話番号は03-6447-0681です。</p>
+            </div>
+          </details>
+
+          <!-- FAQ Item #6 -->
+          <details class="bg-background rounded-lg shadow group" data-aos="fade-up">
+            <summary class="p-4 cursor-pointer font-bold text-primary hover:text-accent transition flex justify-between items-center">
+              <span>Q6. 一人でもペットと一緒でも入りやすいですか？</span>
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 transition-transform group-open:rotate-180 flex-shrink-0" viewBox="0 0 24 15" fill="#C9A86C">
+                <path d="M8.35 3c-.44 0-.84.17-1.15.47-.3.31-.5.69-.5 1.11 0 .94.77 1.67 1.68 1.67.43 0 .83-.17 1.14-.47.3-.31.5-.69.5-1.11C10 3.73 9.24 3 8.35 3m7.3 0c-.44 0-.84.17-1.15.47-.3.31-.5.69-.5 1.11 0 .94.77 1.67 1.68 1.67.43 0 .83-.17 1.14-.47.3-.31.5-.69.5-1.11C17.32 3.73 16.56 3 15.65 3M5 6.5c-.66 0-1.27.26-1.73.7-.45.46-.72 1.07-.72 1.72C2.55 10.01 3.53 11 4.67 11c.65 0 1.26-.26 1.72-.7.45-.46.72-1.07.72-1.72C7.11 7.5 6.13 6.5 5 6.5m14 0c-.66 0-1.27.26-1.73.7-.45.46-.72 1.07-.72 1.72 0 1.09.98 2.08 2.12 2.08.65 0 1.26-.26 1.72-.7.45-.46.72-1.07.72-1.72 0-1.08-.98-2.08-2.11-2.08m-7 3c-2.35 0-4.23 1.88-4.53 4.26-.06.53.27.98.8.98h7.46c.53 0 .86-.45.8-.98C16.23 11.38 14.35 9.5 12 9.5m0 2.5c1.12 0 2.07.74 2.39 1.75H9.61c.32-1.01 1.27-1.75 2.39-1.75"/>
+              </svg>
+            </summary>
+            <div class="p-4 pt-0 text-text">
+              <p>はい、とても入りやすいです。お一人で来店される方、わんちゃんと静かに過ごしたい方、どちらも多くいらっしゃいます。落ち着いた雰囲気の中でそれぞれの時間を大切にされている印象です。</p>
+            </div>
+          </details>
+
+          <!-- FAQ Item #7 -->
+          <details class="bg-background rounded-lg shadow group" data-aos="fade-up">
+            <summary class="p-4 cursor-pointer font-bold text-primary hover:text-accent transition flex justify-between items-center">
+              <span>Q7. 犬連れで長時間滞在しても問題ありませんか？</span>
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 transition-transform group-open:rotate-180 flex-shrink-0" viewBox="0 0 24 15" fill="#C9A86C">
+                <path d="M8.35 3c-.44 0-.84.17-1.15.47-.3.31-.5.69-.5 1.11 0 .94.77 1.67 1.68 1.67.43 0 .83-.17 1.14-.47.3-.31.5-.69.5-1.11C10 3.73 9.24 3 8.35 3m7.3 0c-.44 0-.84.17-1.15.47-.3.31-.5.69-.5 1.11 0 .94.77 1.67 1.68 1.67.43 0 .83-.17 1.14-.47.3-.31.5-.69.5-1.11C17.32 3.73 16.56 3 15.65 3M5 6.5c-.66 0-1.27.26-1.73.7-.45.46-.72 1.07-.72 1.72C2.55 10.01 3.53 11 4.67 11c.65 0 1.26-.26 1.72-.7.45-.46.72-1.07.72-1.72C7.11 7.5 6.13 6.5 5 6.5m14 0c-.66 0-1.27.26-1.73.7-.45.46-.72 1.07-.72 1.72 0 1.09.98 2.08 2.12 2.08.65 0 1.26-.26 1.72-.7.45-.46.72-1.07.72-1.72 0-1.08-.98-2.08-2.11-2.08m-7 3c-2.35 0-4.23 1.88-4.53 4.26-.06.53.27.98.8.98h7.46c.53 0 .86-.45.8-.98C16.23 11.38 14.35 9.5 12 9.5m0 2.5c1.12 0 2.07.74 2.39 1.75H9.61c.32-1.01 1.27-1.75 2.39-1.75"/>
+              </svg>
+            </summary>
+            <div class="p-4 pt-0 text-text">
+              <p>はい、問題ありません。周囲への配慮をお願いしていますが、落ち着いて過ごせるわんちゃんであればゆっくりお過ごしいただけます。</p>
+            </div>
+          </details>
+
+          <!-- FAQ Item #8 -->
+          <details class="bg-background rounded-lg shadow group" data-aos="fade-up">
+            <summary class="p-4 cursor-pointer font-bold text-primary hover:text-accent transition flex justify-between items-center">
+              <span>Q8. ペットのサイズや犬種に制限はありますか？</span>
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 transition-transform group-open:rotate-180 flex-shrink-0" viewBox="0 0 24 15" fill="#C9A86C">
+                <path d="M8.35 3c-.44 0-.84.17-1.15.47-.3.31-.5.69-.5 1.11 0 .94.77 1.67 1.68 1.67.43 0 .83-.17 1.14-.47.3-.31.5-.69.5-1.11C10 3.73 9.24 3 8.35 3m7.3 0c-.44 0-.84.17-1.15.47-.3.31-.5.69-.5 1.11 0 .94.77 1.67 1.68 1.67.43 0 .83-.17 1.14-.47.3-.31.5-.69.5-1.11C17.32 3.73 16.56 3 15.65 3M5 6.5c-.66 0-1.27.26-1.73.7-.45.46-.72 1.07-.72 1.72C2.55 10.01 3.53 11 4.67 11c.65 0 1.26-.26 1.72-.7.45-.46.72-1.07.72-1.72C7.11 7.5 6.13 6.5 5 6.5m14 0c-.66 0-1.27.26-1.73.7-.45.46-.72 1.07-.72 1.72 0 1.09.98 2.08 2.12 2.08.65 0 1.26-.26 1.72-.7.45-.46.72-1.07.72-1.72 0-1.08-.98-2.08-2.11-2.08m-7 3c-2.35 0-4.23 1.88-4.53 4.26-.06.53.27.98.8.98h7.46c.53 0 .86-.45.8-.98C16.23 11.38 14.35 9.5 12 9.5m0 2.5c1.12 0 2.07.74 2.39 1.75H9.61c.32-1.01 1.27-1.75 2.39-1.75"/>
+              </svg>
+            </summary>
+            <div class="p-4 pt-0 text-text">
+              <p>基本的にサイズや犬種の制限は設けていません。ただし、店内空間の都合上、配慮が必要な場合はスタッフからご相談させていただくことがあります。不安な方は事前にお電話ください。</p>
+            </div>
+          </details>
+
+          <!-- FAQ Item #9 -->
+          <details class="bg-background rounded-lg shadow group" data-aos="fade-up">
+            <summary class="p-4 cursor-pointer font-bold text-primary hover:text-accent transition flex justify-between items-center">
+              <span>Q9. ペット同伴で利用する際にマナーやルールはありますか？</span>
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 transition-transform group-open:rotate-180 flex-shrink-0" viewBox="0 0 24 15" fill="#C9A86C">
+                <path d="M8.35 3c-.44 0-.84.17-1.15.47-.3.31-.5.69-.5 1.11 0 .94.77 1.67 1.68 1.67.43 0 .83-.17 1.14-.47.3-.31.5-.69.5-1.11C10 3.73 9.24 3 8.35 3m7.3 0c-.44 0-.84.17-1.15.47-.3.31-.5.69-.5 1.11 0 .94.77 1.67 1.68 1.67.43 0 .83-.17 1.14-.47.3-.31.5-.69.5-1.11C17.32 3.73 16.56 3 15.65 3M5 6.5c-.66 0-1.27.26-1.73.7-.45.46-.72 1.07-.72 1.72C2.55 10.01 3.53 11 4.67 11c.65 0 1.26-.26 1.72-.7.45-.46.72-1.07.72-1.72C7.11 7.5 6.13 6.5 5 6.5m14 0c-.66 0-1.27.26-1.73.7-.45.46-.72 1.07-.72 1.72 0 1.09.98 2.08 2.12 2.08.65 0 1.26-.26 1.72-.7.45-.46.72-1.07.72-1.72 0-1.08-.98-2.08-2.11-2.08m-7 3c-2.35 0-4.23 1.88-4.53 4.26-.06.53.27.98.8.98h7.46c.53 0 .86-.45.8-.98C16.23 11.38 14.35 9.5 12 9.5m0 2.5c1.12 0 2.07.74 2.39 1.75H9.61c.32-1.01 1.27-1.75 2.39-1.75"/>
+              </svg>
+            </summary>
+            <div class="p-4 pt-0 text-text">
+              <p>はい、いくつかお願いしています。店内ではリードを付けていただくかキャリー・カートでの管理をお願いしています。ペットも人もどちらも心地よく過ごせる空間づくりのためのルールですので、ご理解いただけるとうれしいです。</p>
+            </div>
+          </details>
+
+          <!-- FAQ Item #10 -->
+          <details class="bg-background rounded-lg shadow group" data-aos="fade-up">
+            <summary class="p-4 cursor-pointer font-bold text-primary hover:text-accent transition flex justify-between items-center">
+              <span>Q10. 店内で犬を抱っこしても大丈夫ですか？</span>
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 transition-transform group-open:rotate-180 flex-shrink-0" viewBox="0 0 24 15" fill="#C9A86C">
+                <path d="M8.35 3c-.44 0-.84.17-1.15.47-.3.31-.5.69-.5 1.11 0 .94.77 1.67 1.68 1.67.43 0 .83-.17 1.14-.47.3-.31.5-.69.5-1.11C10 3.73 9.24 3 8.35 3m7.3 0c-.44 0-.84.17-1.15.47-.3.31-.5.69-.5 1.11 0 .94.77 1.67 1.68 1.67.43 0 .83-.17 1.14-.47.3-.31.5-.69.5-1.11C17.32 3.73 16.56 3 15.65 3M5 6.5c-.66 0-1.27.26-1.73.7-.45.46-.72 1.07-.72 1.72C2.55 10.01 3.53 11 4.67 11c.65 0 1.26-.26 1.72-.7.45-.46.72-1.07.72-1.72C7.11 7.5 6.13 6.5 5 6.5m14 0c-.66 0-1.27.26-1.73.7-.45.46-.72 1.07-.72 1.72 0 1.09.98 2.08 2.12 2.08.65 0 1.26-.26 1.72-.7.45-.46.72-1.07.72-1.72 0-1.08-.98-2.08-2.11-2.08m-7 3c-2.35 0-4.23 1.88-4.53 4.26-.06.53.27.98.8.98h7.46c.53 0 .86-.45.8-.98C16.23 11.38 14.35 9.5 12 9.5m0 2.5c1.12 0 2.07.74 2.39 1.75H9.61c.32-1.01 1.27-1.75 2.39-1.75"/>
+              </svg>
+            </summary>
+            <div class="p-4 pt-0 text-text">
+              <p>はい、抱っこしていただいて大丈夫です。カートやキャリーなど、その子に合った方法でお過ごしください。ただし、テーブルの上に乗せることは衛生面の観点からご遠慮いただいています。</p>
+            </div>
+          </details>
+
+          <!-- FAQ Item #11 -->
+          <details class="bg-background rounded-lg shadow group" data-aos="fade-up">
+            <summary class="p-4 cursor-pointer font-bold text-primary hover:text-accent transition flex justify-between items-center">
+              <span>Q11. ペット同伴の場合、他のお客さまとの距離は保たれますか？</span>
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 transition-transform group-open:rotate-180 flex-shrink-0" viewBox="0 0 24 15" fill="#C9A86C">
+                <path d="M8.35 3c-.44 0-.84.17-1.15.47-.3.31-.5.69-.5 1.11 0 .94.77 1.67 1.68 1.67.43 0 .83-.17 1.14-.47.3-.31.5-.69.5-1.11C10 3.73 9.24 3 8.35 3m7.3 0c-.44 0-.84.17-1.15.47-.3.31-.5.69-.5 1.11 0 .94.77 1.67 1.68 1.67.43 0 .83-.17 1.14-.47.3-.31.5-.69.5-1.11C17.32 3.73 16.56 3 15.65 3M5 6.5c-.66 0-1.27.26-1.73.7-.45.46-.72 1.07-.72 1.72C2.55 10.01 3.53 11 4.67 11c.65 0 1.26-.26 1.72-.7.45-.46.72-1.07.72-1.72C7.11 7.5 6.13 6.5 5 6.5m14 0c-.66 0-1.27.26-1.73.7-.45.46-.72 1.07-.72 1.72 0 1.09.98 2.08 2.12 2.08.65 0 1.26-.26 1.72-.7.45-.46.72-1.07.72-1.72 0-1.08-.98-2.08-2.11-2.08m-7 3c-2.35 0-4.23 1.88-4.53 4.26-.06.53.27.98.8.98h7.46c.53 0 .86-.45.8-.98C16.23 11.38 14.35 9.5 12 9.5m0 2.5c1.12 0 2.07.74 2.39 1.75H9.61c.32-1.01 1.27-1.75 2.39-1.75"/>
+              </svg>
+            </summary>
+            <div class="p-4 pt-0 text-text">
+              <p>はい、できる限り配慮しています。ペット同伴のお客さまと動物が少し苦手な方のどちらも安心できるよう、席の配置やご案内を工夫しています。</p>
+            </div>
+          </details>
+
+          <!-- FAQ Item #12 -->
+          <details class="bg-background rounded-lg shadow group" data-aos="fade-up">
+            <summary class="p-4 cursor-pointer font-bold text-primary hover:text-accent transition flex justify-between items-center">
+              <span>Q12. ペットアレルギーのお客さまがいる場合はどうしていますか？</span>
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 transition-transform group-open:rotate-180 flex-shrink-0" viewBox="0 0 24 15" fill="#C9A86C">
+                <path d="M8.35 3c-.44 0-.84.17-1.15.47-.3.31-.5.69-.5 1.11 0 .94.77 1.67 1.68 1.67.43 0 .83-.17 1.14-.47.3-.31.5-.69.5-1.11C10 3.73 9.24 3 8.35 3m7.3 0c-.44 0-.84.17-1.15.47-.3.31-.5.69-.5 1.11 0 .94.77 1.67 1.68 1.67.43 0 .83-.17 1.14-.47.3-.31.5-.69.5-1.11C17.32 3.73 16.56 3 15.65 3M5 6.5c-.66 0-1.27.26-1.73.7-.45.46-.72 1.07-.72 1.72C2.55 10.01 3.53 11 4.67 11c.65 0 1.26-.26 1.72-.7.45-.46.72-1.07.72-1.72C7.11 7.5 6.13 6.5 5 6.5m14 0c-.66 0-1.27.26-1.73.7-.45.46-.72 1.07-.72 1.72 0 1.09.98 2.08 2.12 2.08.65 0 1.26-.26 1.72-.7.45-.46.72-1.07.72-1.72 0-1.08-.98-2.08-2.11-2.08m-7 3c-2.35 0-4.23 1.88-4.53 4.26-.06.53.27.98.8.98h7.46c.53 0 .86-.45.8-.98C16.23 11.38 14.35 9.5 12 9.5m0 2.5c1.12 0 2.07.74 2.39 1.75H9.61c.32-1.01 1.27-1.75 2.39-1.75"/>
+              </svg>
+            </summary>
+            <div class="p-4 pt-0 text-text">
+              <p>お席の間隔を調整したりエリアを分けるなど、状況に応じて対応しています。ご不安な点があれば遠慮なくスタッフにお声がけください。</p>
+            </div>
+          </details>
+
+          <!-- FAQ Item #13 -->
+          <details class="bg-background rounded-lg shadow group" data-aos="fade-up">
+            <summary class="p-4 cursor-pointer font-bold text-primary hover:text-accent transition flex justify-between items-center">
+              <span>Q13. ペット同伴カフェでも衛生面は大丈夫ですか？</span>
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 transition-transform group-open:rotate-180 flex-shrink-0" viewBox="0 0 24 15" fill="#C9A86C">
+                <path d="M8.35 3c-.44 0-.84.17-1.15.47-.3.31-.5.69-.5 1.11 0 .94.77 1.67 1.68 1.67.43 0 .83-.17 1.14-.47.3-.31.5-.69.5-1.11C10 3.73 9.24 3 8.35 3m7.3 0c-.44 0-.84.17-1.15.47-.3.31-.5.69-.5 1.11 0 .94.77 1.67 1.68 1.67.43 0 .83-.17 1.14-.47.3-.31.5-.69.5-1.11C17.32 3.73 16.56 3 15.65 3M5 6.5c-.66 0-1.27.26-1.73.7-.45.46-.72 1.07-.72 1.72C2.55 10.01 3.53 11 4.67 11c.65 0 1.26-.26 1.72-.7.45-.46.72-1.07.72-1.72C7.11 7.5 6.13 6.5 5 6.5m14 0c-.66 0-1.27.26-1.73.7-.45.46-.72 1.07-.72 1.72 0 1.09.98 2.08 2.12 2.08.65 0 1.26-.26 1.72-.7.45-.46.72-1.07.72-1.72 0-1.08-.98-2.08-2.11-2.08m-7 3c-2.35 0-4.23 1.88-4.53 4.26-.06.53.27.98.8.98h7.46c.53 0 .86-.45.8-.98C16.23 11.38 14.35 9.5 12 9.5m0 2.5c1.12 0 2.07.74 2.39 1.75H9.61c.32-1.01 1.27-1.75 2.39-1.75"/>
+              </svg>
+            </summary>
+            <div class="p-4 pt-0 text-text">
+              <p>はい、ご安心ください。保健所の基準に沿った衛生管理を行い、清掃や消毒も定期的に実施しています。人もペットも快適に過ごせる環境づくりを大切にしています。</p>
+            </div>
+          </details>
+
+          <!-- FAQ Item #14 -->
+          <details class="bg-background rounded-lg shadow group" data-aos="fade-up">
+            <summary class="p-4 cursor-pointer font-bold text-primary hover:text-accent transition flex justify-between items-center">
+              <span>Q14. ペット用のメニューはありますか？</span>
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 transition-transform group-open:rotate-180 flex-shrink-0" viewBox="0 0 24 15" fill="#C9A86C">
+                <path d="M8.35 3c-.44 0-.84.17-1.15.47-.3.31-.5.69-.5 1.11 0 .94.77 1.67 1.68 1.67.43 0 .83-.17 1.14-.47.3-.31.5-.69.5-1.11C10 3.73 9.24 3 8.35 3m7.3 0c-.44 0-.84.17-1.15.47-.3.31-.5.69-.5 1.11 0 .94.77 1.67 1.68 1.67.43 0 .83-.17 1.14-.47.3-.31.5-.69.5-1.11C17.32 3.73 16.56 3 15.65 3M5 6.5c-.66 0-1.27.26-1.73.7-.45.46-.72 1.07-.72 1.72C2.55 10.01 3.53 11 4.67 11c.65 0 1.26-.26 1.72-.7.45-.46.72-1.07.72-1.72C7.11 7.5 6.13 6.5 5 6.5m14 0c-.66 0-1.27.26-1.73.7-.45.46-.72 1.07-.72 1.72 0 1.09.98 2.08 2.12 2.08.65 0 1.26-.26 1.72-.7.45-.46.72-1.07.72-1.72 0-1.08-.98-2.08-2.11-2.08m-7 3c-2.35 0-4.23 1.88-4.53 4.26-.06.53.27.98.8.98h7.46c.53 0 .86-.45.8-.98C16.23 11.38 14.35 9.5 12 9.5m0 2.5c1.12 0 2.07.74 2.39 1.75H9.61c.32-1.01 1.27-1.75 2.39-1.75"/>
+              </svg>
+            </summary>
+            <div class="p-4 pt-0 text-text">
+              <p>現在、専用のペット用のメニューはご用意していません。衛生管理や保健所基準を考慮した上での判断です。その分、一緒に過ごす時間や写真撮影など、思い出に残る体験を大切にしています。</p>
+            </div>
+          </details>
+
+          <!-- FAQ Item #15 -->
+          <details class="bg-background rounded-lg shadow group" data-aos="fade-up">
+            <summary class="p-4 cursor-pointer font-bold text-primary hover:text-accent transition flex justify-between items-center">
+              <span>Q15. ペットのおやつを持ち込んでも大丈夫ですか？</span>
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 transition-transform group-open:rotate-180 flex-shrink-0" viewBox="0 0 24 15" fill="#C9A86C">
+                <path d="M8.35 3c-.44 0-.84.17-1.15.47-.3.31-.5.69-.5 1.11 0 .94.77 1.67 1.68 1.67.43 0 .83-.17 1.14-.47.3-.31.5-.69.5-1.11C10 3.73 9.24 3 8.35 3m7.3 0c-.44 0-.84.17-1.15.47-.3.31-.5.69-.5 1.11 0 .94.77 1.67 1.68 1.67.43 0 .83-.17 1.14-.47.3-.31.5-.69.5-1.11C17.32 3.73 16.56 3 15.65 3M5 6.5c-.66 0-1.27.26-1.73.7-.45.46-.72 1.07-.72 1.72C2.55 10.01 3.53 11 4.67 11c.65 0 1.26-.26 1.72-.7.45-.46.72-1.07.72-1.72C7.11 7.5 6.13 6.5 5 6.5m14 0c-.66 0-1.27.26-1.73.7-.45.46-.72 1.07-.72 1.72 0 1.09.98 2.08 2.12 2.08.65 0 1.26-.26 1.72-.7.45-.46.72-1.07.72-1.72 0-1.08-.98-2.08-2.11-2.08m-7 3c-2.35 0-4.23 1.88-4.53 4.26-.06.53.27.98.8.98h7.46c.53 0 .86-.45.8-.98C16.23 11.38 14.35 9.5 12 9.5m0 2.5c1.12 0 2.07.74 2.39 1.75H9.61c.32-1.01 1.27-1.75 2.39-1.75"/>
+              </svg>
+            </summary>
+            <div class="p-4 pt-0 text-text">
+              <p>基本的には可能です。ただし、においの強いものや周囲への配慮が必要なものはご遠慮ください。迷われた場合は、事前にスタッフへご相談ください。</p>
+            </div>
+          </details>
+
+          <!-- FAQ Item #16 -->
+          <details class="bg-background rounded-lg shadow group" data-aos="fade-up">
+            <summary class="p-4 cursor-pointer font-bold text-primary hover:text-accent transition flex justify-between items-center">
+              <span>Q16. 写真映えするペット可カフェを探しています</span>
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 transition-transform group-open:rotate-180 flex-shrink-0" viewBox="0 0 24 15" fill="#C9A86C">
+                <path d="M8.35 3c-.44 0-.84.17-1.15.47-.3.31-.5.69-.5 1.11 0 .94.77 1.67 1.68 1.67.43 0 .83-.17 1.14-.47.3-.31.5-.69.5-1.11C10 3.73 9.24 3 8.35 3m7.3 0c-.44 0-.84.17-1.15.47-.3.31-.5.69-.5 1.11 0 .94.77 1.67 1.68 1.67.43 0 .83-.17 1.14-.47.3-.31.5-.69.5-1.11C17.32 3.73 16.56 3 15.65 3M5 6.5c-.66 0-1.27.26-1.73.7-.45.46-.72 1.07-.72 1.72C2.55 10.01 3.53 11 4.67 11c.65 0 1.26-.26 1.72-.7.45-.46.72-1.07.72-1.72C7.11 7.5 6.13 6.5 5 6.5m14 0c-.66 0-1.27.26-1.73.7-.45.46-.72 1.07-.72 1.72 0 1.09.98 2.08 2.12 2.08.65 0 1.26-.26 1.72-.7.45-.46.72-1.07.72-1.72 0-1.08-.98-2.08-2.11-2.08m-7 3c-2.35 0-4.23 1.88-4.53 4.26-.06.53.27.98.8.98h7.46c.53 0 .86-.45.8-.98C16.23 11.38 14.35 9.5 12 9.5m0 2.5c1.12 0 2.07.74 2.39 1.75H9.61c.32-1.01 1.27-1.75 2.39-1.75"/>
+              </svg>
+            </summary>
+            <div class="p-4 pt-0 text-text">
+              <p>Green Beans Coffeeは写真撮影を楽しみに来られる方も多いカフェです。フォトブースやチェキ撮影イベントを行うこともあります。撮影の際は他のお客さまが写り込まないようご配慮をお願いします。</p>
+            </div>
+          </details>
+
+          <!-- FAQ Item #17 -->
+          <details class="bg-background rounded-lg shadow group" data-aos="fade-up">
+            <summary class="p-4 cursor-pointer font-bold text-primary hover:text-accent transition flex justify-between items-center">
+              <span>Q17. 店内で写真撮影はできますか？</span>
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 transition-transform group-open:rotate-180 flex-shrink-0" viewBox="0 0 24 15" fill="#C9A86C">
+                <path d="M8.35 3c-.44 0-.84.17-1.15.47-.3.31-.5.69-.5 1.11 0 .94.77 1.67 1.68 1.67.43 0 .83-.17 1.14-.47.3-.31.5-.69.5-1.11C10 3.73 9.24 3 8.35 3m7.3 0c-.44 0-.84.17-1.15.47-.3.31-.5.69-.5 1.11 0 .94.77 1.67 1.68 1.67.43 0 .83-.17 1.14-.47.3-.31.5-.69.5-1.11C17.32 3.73 16.56 3 15.65 3M5 6.5c-.66 0-1.27.26-1.73.7-.45.46-.72 1.07-.72 1.72C2.55 10.01 3.53 11 4.67 11c.65 0 1.26-.26 1.72-.7.45-.46.72-1.07.72-1.72C7.11 7.5 6.13 6.5 5 6.5m14 0c-.66 0-1.27.26-1.73.7-.45.46-.72 1.07-.72 1.72 0 1.09.98 2.08 2.12 2.08.65 0 1.26-.26 1.72-.7.45-.46.72-1.07.72-1.72 0-1.08-.98-2.08-2.11-2.08m-7 3c-2.35 0-4.23 1.88-4.53 4.26-.06.53.27.98.8.98h7.46c.53 0 .86-.45.8-.98C16.23 11.38 14.35 9.5 12 9.5m0 2.5c1.12 0 2.07.74 2.39 1.75H9.61c.32-1.01 1.27-1.75 2.39-1.75"/>
+              </svg>
+            </summary>
+            <div class="p-4 pt-0 text-text">
+              <p>はい、撮影していただけます。撮り方や場所に迷った場合はスタッフがお手伝いしますので、お気軽にお声がけください。</p>
+            </div>
+          </details>
+
+          <!-- FAQ Item #18 -->
+          <details class="bg-background rounded-lg shadow group" data-aos="fade-up">
+            <summary class="p-4 cursor-pointer font-bold text-primary hover:text-accent transition flex justify-between items-center">
+              <span>Q18. 店内で愛犬が粗相をしてしまった場合はどうすればいいですか？</span>
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 transition-transform group-open:rotate-180 flex-shrink-0" viewBox="0 0 24 15" fill="#C9A86C">
+                <path d="M8.35 3c-.44 0-.84.17-1.15.47-.3.31-.5.69-.5 1.11 0 .94.77 1.67 1.68 1.67.43 0 .83-.17 1.14-.47.3-.31.5-.69.5-1.11C10 3.73 9.24 3 8.35 3m7.3 0c-.44 0-.84.17-1.15.47-.3.31-.5.69-.5 1.11 0 .94.77 1.67 1.68 1.67.43 0 .83-.17 1.14-.47.3-.31.5-.69.5-1.11C17.32 3.73 16.56 3 15.65 3M5 6.5c-.66 0-1.27.26-1.73.7-.45.46-.72 1.07-.72 1.72C2.55 10.01 3.53 11 4.67 11c.65 0 1.26-.26 1.72-.7.45-.46.72-1.07.72-1.72C7.11 7.5 6.13 6.5 5 6.5m14 0c-.66 0-1.27.26-1.73.7-.45.46-.72 1.07-.72 1.72 0 1.09.98 2.08 2.12 2.08.65 0 1.26-.26 1.72-.7.45-.46.72-1.07.72-1.72 0-1.08-.98-2.08-2.11-2.08m-7 3c-2.35 0-4.23 1.88-4.53 4.26-.06.53.27.98.8.98h7.46c.53 0 .86-.45.8-.98C16.23 11.38 14.35 9.5 12 9.5m0 2.5c1.12 0 2.07.74 2.39 1.75H9.61c.32-1.01 1.27-1.75 2.39-1.75"/>
+              </svg>
+            </summary>
+            <div class="p-4 pt-0 text-text">
+              <p>まずは飼い主さまご自身での一次対応をお願いしています。その後、必ずスタッフにお声がけください。最終的な清掃や消毒はスタッフが責任をもって対応しますのでご安心ください。</p>
+            </div>
+          </details>
+
+          <!-- FAQ Item #19 -->
+          <details class="bg-background rounded-lg shadow group" data-aos="fade-up">
+            <summary class="p-4 cursor-pointer font-bold text-primary hover:text-accent transition flex justify-between items-center">
+              <span>Q19. 粗相が心配な場合、事前にできる対策はありますか？</span>
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 transition-transform group-open:rotate-180 flex-shrink-0" viewBox="0 0 24 15" fill="#C9A86C">
+                <path d="M8.35 3c-.44 0-.84.17-1.15.47-.3.31-.5.69-.5 1.11 0 .94.77 1.67 1.68 1.67.43 0 .83-.17 1.14-.47.3-.31.5-.69.5-1.11C10 3.73 9.24 3 8.35 3m7.3 0c-.44 0-.84.17-1.15.47-.3.31-.5.69-.5 1.11 0 .94.77 1.67 1.68 1.67.43 0 .83-.17 1.14-.47.3-.31.5-.69.5-1.11C17.32 3.73 16.56 3 15.65 3M5 6.5c-.66 0-1.27.26-1.73.7-.45.46-.72 1.07-.72 1.72C2.55 10.01 3.53 11 4.67 11c.65 0 1.26-.26 1.72-.7.45-.46.72-1.07.72-1.72C7.11 7.5 6.13 6.5 5 6.5m14 0c-.66 0-1.27.26-1.73.7-.45.46-.72 1.07-.72 1.72 0 1.09.98 2.08 2.12 2.08.65 0 1.26-.26 1.72-.7.45-.46.72-1.07.72-1.72 0-1.08-.98-2.08-2.11-2.08m-7 3c-2.35 0-4.23 1.88-4.53 4.26-.06.53.27.98.8.98h7.46c.53 0 .86-.45.8-.98C16.23 11.38 14.35 9.5 12 9.5m0 2.5c1.12 0 2.07.74 2.39 1.75H9.61c.32-1.01 1.27-1.75 2.39-1.75"/>
+              </svg>
+            </summary>
+            <div class="p-4 pt-0 text-text">
+              <p>はい、マナーパンツやマナーベルトの着用をおすすめしています。初めての場所でも飼い主さまもペットも安心して過ごしていただけます。</p>
+            </div>
+          </details>
+
+          <!-- FAQ Item #20 -->
+          <details class="bg-background rounded-lg shadow group" data-aos="fade-up">
+            <summary class="p-4 cursor-pointer font-bold text-primary hover:text-accent transition flex justify-between items-center">
+              <span>Q20. 他のお客さまに迷惑がかからないか心配です</span>
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 transition-transform group-open:rotate-180 flex-shrink-0" viewBox="0 0 24 15" fill="#C9A86C">
+                <path d="M8.35 3c-.44 0-.84.17-1.15.47-.3.31-.5.69-.5 1.11 0 .94.77 1.67 1.68 1.67.43 0 .83-.17 1.14-.47.3-.31.5-.69.5-1.11C10 3.73 9.24 3 8.35 3m7.3 0c-.44 0-.84.17-1.15.47-.3.31-.5.69-.5 1.11 0 .94.77 1.67 1.68 1.67.43 0 .83-.17 1.14-.47.3-.31.5-.69.5-1.11C17.32 3.73 16.56 3 15.65 3M5 6.5c-.66 0-1.27.26-1.73.7-.45.46-.72 1.07-.72 1.72C2.55 10.01 3.53 11 4.67 11c.65 0 1.26-.26 1.72-.7.45-.46.72-1.07.72-1.72C7.11 7.5 6.13 6.5 5 6.5m14 0c-.66 0-1.27.26-1.73.7-.45.46-.72 1.07-.72 1.72 0 1.09.98 2.08 2.12 2.08.65 0 1.26-.26 1.72-.7.45-.46.72-1.07.72-1.72 0-1.08-.98-2.08-2.11-2.08m-7 3c-2.35 0-4.23 1.88-4.53 4.26-.06.53.27.98.8.98h7.46c.53 0 .86-.45.8-.98C16.23 11.38 14.35 9.5 12 9.5m0 2.5c1.12 0 2.07.74 2.39 1.75H9.61c.32-1.01 1.27-1.75 2.39-1.75"/>
+              </svg>
+            </summary>
+            <div class="p-4 pt-0 text-text">
+              <p>そのお気持ち、とてもよく分かります。もし吠え続けてしまう場合などはスタッフがさりげなくフォローしますので、無理せずお声がけください。</p>
+            </div>
+          </details>
+
+          <!-- FAQ Item #21 -->
+          <details class="bg-background rounded-lg shadow group" data-aos="fade-up">
+            <summary class="p-4 cursor-pointer font-bold text-primary hover:text-accent transition flex justify-between items-center">
+              <span>Q21. 事前に確認しておいた方がいいことはありますか？</span>
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 transition-transform group-open:rotate-180 flex-shrink-0" viewBox="0 0 24 15" fill="#C9A86C">
+                <path d="M8.35 3c-.44 0-.84.17-1.15.47-.3.31-.5.69-.5 1.11 0 .94.77 1.67 1.68 1.67.43 0 .83-.17 1.14-.47.3-.31.5-.69.5-1.11C10 3.73 9.24 3 8.35 3m7.3 0c-.44 0-.84.17-1.15.47-.3.31-.5.69-.5 1.11 0 .94.77 1.67 1.68 1.67.43 0 .83-.17 1.14-.47.3-.31.5-.69.5-1.11C17.32 3.73 16.56 3 15.65 3M5 6.5c-.66 0-1.27.26-1.73.7-.45.46-.72 1.07-.72 1.72C2.55 10.01 3.53 11 4.67 11c.65 0 1.26-.26 1.72-.7.45-.46.72-1.07.72-1.72C7.11 7.5 6.13 6.5 5 6.5m14 0c-.66 0-1.27.26-1.73.7-.45.46-.72 1.07-.72 1.72 0 1.09.98 2.08 2.12 2.08.65 0 1.26-.26 1.72-.7.45-.46.72-1.07.72-1.72 0-1.08-.98-2.08-2.11-2.08m-7 3c-2.35 0-4.23 1.88-4.53 4.26-.06.53.27.98.8.98h7.46c.53 0 .86-.45.8-.98C16.23 11.38 14.35 9.5 12 9.5m0 2.5c1.12 0 2.07.74 2.39 1.75H9.61c.32-1.01 1.27-1.75 2.39-1.75"/>
+              </svg>
+            </summary>
+            <div class="p-4 pt-0 text-text">
+              <p>初めてご利用される方は混雑状況やペット同伴について事前にお電話で確認していただくと安心です。電話番号は03-6447-0681です。</p>
+            </div>
+          </details>
+
+          <!-- Link to main site -->
+          <div class="bg-gradient-to-r from-accent/10 to-accent/20 rounded-xl p-6 mt-20 shadow-xl border-2 border-accent/30" data-aos="fade-up">
+            <div class="flex items-center justify-center gap-3">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-accent flex-shrink-0">
+                <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                <polyline points="15 3 21 3 21 9"></polyline>
+                <line x1="10" y1="14" x2="21" y2="3"></line>
+              </svg>
+              <p class="text-text text-base leading-relaxed">
+                <a href="../index.html#faq" target="_blank" rel="noopener noreferrer" class="font-semibold underline hover:no-underline text-primary transition-colors">Green Beans CoffeeのFAQに関しては GBCアンバサダーKikumiが定期的に発信しています。</a>
+              </p>
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-accent flex-shrink-0">
+                <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                <polyline points="15 3 21 3 21 9"></polyline>
+                <line x1="10" y1="14" x2="21" y2="3"></line>
+              </svg>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Wave Divider -->
+    <div class="wave-divider bg-white">
+      <svg viewBox="0 0 1200 60" preserveAspectRatio="none">
+        <path d="M0,30 C200,60 400,0 600,30 C800,60 1000,0 1200,30 L1200,60 L0,60 Z" fill="#FAF8F5"/>
+      </svg>
+    </div>
+
+    <!-- Ambassador Section -->
+    <section id="ambassador" class="py-20 bg-background">
+      <div class="container mx-auto px-4">
+        <h2 class="text-4xl md:text-5xl font-bold text-center text-primary mb-12" data-aos="fade-up">アンバサダー Ayaka</h2>
+
+        <div class="max-w-4xl mx-auto">
+          <div class="bg-white rounded-lg shadow-lg overflow-hidden" data-aos="fade-up">
+            <div class="md:flex">
+              <div class="md:w-1/3">
+                <img
+                  src="assets/images/ambassador-ayaka.jpg"
+                  alt="アンバサダー Ayaka"
+                  class="w-full h-64 md:h-full object-cover"
+                  loading="lazy"
+                  decoding="async"
+                >
+              </div>
+              <div class="p-8 md:w-2/3">
+                <p class="text-text leading-relaxed mb-4">
+                  愛犬のポン（ポメラニアン）と一緒に暮らしています。2023年の夏からGreen Beans Coffeeのスタッフとして働いていました。
+                </p>
+                <p class="text-text leading-relaxed mb-4">
+                  スタッフとして働く中で、ポン目当てで来店された飼い主さんから「ここなら安心して過ごせる」という声を何度も耳にしました。私自身も愛犬と一緒に心から落ち着ける場所を探してきた一人として、その言葉一つひとつに深く共感し、このお店が持つ安心感の価値を実感してきました。
+                </p>
+                <p class="text-text leading-relaxed mb-4">
+                  現在はGreen Beans Coffeeのペットアンバサダーとして、主にペットイベントの際に活動しています。ペット目線でこのお店の魅力を感じてきた一人として、これからも定期的に情報を発信していきます。
+                </p>
+
+                <!-- Instagram Link -->
+                <div class="text-right mt-6">
+                  <a href="https://www.instagram.com/pome_ponkun/" target="_blank" class="inline-flex items-center gap-2 text-secondary hover:text-primary transition-colors duration-200 hover:underline font-semibold">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                      <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                      <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                      <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+                    </svg>
+                    @pome_ponkun
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Wave Divider -->
+    <div class="wave-divider bg-background">
+      <svg viewBox="0 0 1200 60" preserveAspectRatio="none">
+        <path d="M0,30 C200,60 400,0 600,30 C800,60 1000,0 1200,30 L1200,60 L0,60 Z" fill="#FAF8F5"/>
+      </svg>
+    </div>
+
+    <!-- Links Section -->
+    <section id="links" class="py-20 bg-background text-primary">
+      <div class="container mx-auto px-4">
+        <h2 class="text-4xl md:text-5xl font-bold text-center mb-16" data-aos="fade-up">Links</h2>
+
+        <div class="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+          <!-- Official Links -->
+          <div data-aos="fade-right">
+            <h3 class="text-2xl font-bold mb-6 text-accent">公式リンク</h3>
+            <ul class="space-y-4">
+              <li>
+                <a href="https://www.instagram.com/green.beanscoffee" target="_blank" class="flex items-center gap-3 hover:text-accent transition">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                    <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                    <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+                  </svg>
+                  Instagram
+                </a>
+              </li>
+              <li>
+                <a href="https://www.youtube.com/@greenbeanscoffee9" target="_blank" class="flex items-center gap-3 hover:text-accent transition">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z"></path>
+                    <polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"></polygon>
+                  </svg>
+                  YouTube
+                </a>
+              </li>
+              <li>
+                <a href="https://tabelog.com/tokyo/A1309/A130901/13277423" target="_blank" class="flex items-center gap-3 hover:text-accent transition">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <circle cx="12" cy="12" r="10"></circle>
+                    <path d="M12 16v-4"></path>
+                    <path d="M12 8h.01"></path>
+                  </svg>
+                  食べログ
+                </a>
+              </li>
+              <li>
+                <a href="https://www.hotpepper.jp/strJ004509887/" target="_blank" class="flex items-center gap-3 hover:text-accent transition">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <circle cx="12" cy="12" r="10"></circle>
+                    <path d="M12 16v-4"></path>
+                    <path d="M12 8h.01"></path>
+                  </svg>
+                  ホットペッパー
+                </a>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Site Links -->
+          <div data-aos="fade-left">
+            <h3 class="text-2xl font-bold mb-6 text-accent">サイトリンク</h3>
+            <ul class="space-y-4">
+              <li>
+                <a href="../index.html" target="_blank" rel="noopener noreferrer" class="flex items-center gap-3 hover:text-accent transition">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
+                    <polyline points="9 22 9 12 15 12 15 22"></polyline>
+                  </svg>
+                  GBCアンバサダーメインサイト
+                </a>
+              </li>
+              <li>
+                <a href="../index.html#menu" target="_blank" rel="noopener noreferrer" class="flex items-center gap-3 hover:text-accent transition">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M3 2v7c0 1.1.9 2 2 2h4a2 2 0 0 0 2-2V2"></path>
+                    <path d="M7 2v20"></path>
+                    <path d="M21 15V2v0a5 5 0 0 0-5 5v6c0 1.1.9 2 2 2h3Zm0 0v7"></path>
+                  </svg>
+                  GBCのメニューを見る
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-text text-white py-12">
+      <div class="container mx-auto px-4 text-center">
+        <h3 class="text-xl font-bold mb-4">このサイトについて</h3>
+        <p class="mb-8 text-sm md:text-base text-left md:text-center">
+          <span class="md:block">このサイトはGreen Beans CoffeeのペットアンバサダーAyaka がお店で確認した情報をもとに作成しています。</span>
+          <span class="md:block md:mt-2">お店の最新情報・公式情報は<a href="https://www.instagram.com/green.beanscoffee" target="_blank" class="no-underline hover:underline transition-all">Instagram</a>をご確認ください。</span>
+        </p>
+
+        <div class="border-t border-white/20 pt-8 mt-8">
+          <p class="text-sm opacity-75">
+            © 2026 Green Beans Coffee Pet Ambassador. All rights reserved.
+          </p>
+        </div>
+      </div>
+    </footer>
+  </main>
+
+  <!-- CDN: AOS JavaScript -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+
+  <!-- Custom JavaScript -->
+  <script>
+    // Initialize AOS
+    AOS.init({
+      duration: 800,
+      easing: 'ease-in-out',
+      once: true,
+      offset: 100
+    });
+
+    // Navigation background change on scroll
+    const nav = document.getElementById('main-nav');
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 50) {
+        nav.classList.remove('bg-transparent', 'text-white');
+        nav.classList.add('bg-white/70', 'backdrop-blur-md', 'text-primary', 'shadow-md');
+      } else {
+        nav.classList.add('bg-transparent', 'text-white');
+        nav.classList.remove('bg-white/70', 'backdrop-blur-md', 'text-primary', 'shadow-md');
+      }
+    });
+
+    // Mobile menu toggle
+    const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+    const mobileMenu = document.getElementById('mobile-menu');
+    const mobileMenuLinks = document.querySelectorAll('.mobile-menu-link');
+
+    mobileMenuBtn.addEventListener('click', () => {
+      mobileMenu.classList.toggle('hidden');
+    });
+
+    // Close mobile menu when a link is clicked
+    mobileMenuLinks.forEach(link => {
+      link.addEventListener('click', () => {
+        mobileMenu.classList.add('hidden');
+      });
+    });
+
+    // Scroll to top functionality
+    const scrollToTopLinks = document.querySelectorAll('.scroll-to-top');
+    scrollToTopLinks.forEach(link => {
+      link.addEventListener('click', (e) => {
+        e.preventDefault();
+        window.scrollTo({
+          top: 0,
+          behavior: 'smooth'
+        });
+        // Clear hash from URL
+        setTimeout(() => {
+          history.pushState('', document.title, window.location.pathname + window.location.search);
+        }, 100);
+      });
+    });
+
+    // Hero image auto-switching with smooth crossfade
+    const heroBg1 = document.getElementById('hero-bg-1');
+    const heroBg2 = document.getElementById('hero-bg-2');
+    let showingFirst = true;
+
+    setInterval(() => {
+      if (showingFirst) {
+        heroBg1.style.opacity = '0';
+        heroBg2.style.opacity = '1';
+      } else {
+        heroBg1.style.opacity = '1';
+        heroBg2.style.opacity = '0';
+      }
+      showingFirst = !showingFirst;
+    }, 7000); // Switch every 7 seconds
+  </script>
+
+  <!-- JSON-LD Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "CafeOrCoffeeShop",
+    "name": "Green Beans Coffee",
+    "alternateName": "グリーンビーンズコーヒー",
+    "description": "北参道・千駄ヶ谷の都会派ペットフレンドリー自家焙煎カフェ。店内ペット同伴OK、犬用水提供、チェキ撮影サービスあり。",
+    "url": "https://greenbeanscoffeeambassador.com/pets/",
+    "telephone": "+81-3-6447-0681",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "千駄ヶ谷3-30-1 RC APARTMENT 1階",
+      "addressLocality": "渋谷区",
+      "addressRegion": "東京都",
+      "postalCode": "151-0051",
+      "addressCountry": "JP"
+    },
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": 35.6775167,
+      "longitude": 139.7078346
+    },
+    "openingHoursSpecification": {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
+      "opens": "10:30",
+      "closes": "20:00"
+    },
+    "amenityFeature": [
+      {"@type": "LocationFeatureSpecification", "name": "ペット同伴可", "value": true},
+      {"@type": "LocationFeatureSpecification", "name": "犬用水提供", "value": true},
+      {"@type": "LocationFeatureSpecification", "name": "テラス席", "value": true},
+      {"@type": "LocationFeatureSpecification", "name": "チェキ撮影サービス", "value": true},
+      {"@type": "LocationFeatureSpecification", "name": "Wi-Fi", "value": true},
+      {"@type": "LocationFeatureSpecification", "name": "バリアフリー", "value": true}
+    ],
+    "sameAs": [
+      "https://www.instagram.com/green.beanscoffee",
+      "https://www.youtube.com/@greenbeanscoffee9"
+    ]
+  }
+  </script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Green Beans Coffeeはどんなカフェですか？",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "2022年のオープン当初から店内ペット同伴OKを続けているコーヒー専門店です。自家焙煎コーヒーやハンドドリップに力を入れながらペットも家族の一員として一緒に過ごせる空間づくりを大切にしています。記念チェキ撮影やフォトブース展示など、お客さまの思い出づくりへの取り組みも特徴のひとつです。"
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Green Beans Coffeeはペット同伴できますか？",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "はい、ペット同伴可能です。Green Beans Coffeeは北参道・千駄ケ谷エリアでは珍しく店内までペット同伴OKのカフェです。「北参道 ペット可 カフェ」「千駄ヶ谷 ペット可 カフェ」で検索して来店される方も多いです。雨の日や暑い日、寒い日でも、わんちゃんと一緒に安心して過ごしていただけます。"
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "雨の日でもペット同伴で利用できますか？",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "はい、利用できます。店内ペット同伴OKのため天候に左右されずご利用いただけます。特に梅雨や夏場は「店内OKで助かりました」というお声を多くいただいています。"
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "ペット同伴は初めてなんですけど大丈夫ですか？",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "はい、大丈夫です。初めてペット同伴で来店される方も多くいらっしゃいます。入店時に不安な点があればスタッフが自然にお声がけしますのでご安心ください。「何に気をつけたらいいか分からない」という方にも無理なく過ごしていただけるようスタッフがサポートしています。私自身も最初は同じ気持ちでした。"
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "ペット同伴の場合、予約は必要ですか？",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "必須ではありませんが、店内でゆっくり過ごしたい場合は事前のお電話予約をおすすめしています。混雑状況に合わせてお席をご案内できます。電話番号は03-6447-0681です。"
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "一人でもペットと一緒でも入りやすいですか？",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "はい、とても入りやすいです。お一人で来店される方、わんちゃんと静かに過ごしたい方、どちらも多くいらっしゃいます。落ち着いた雰囲気の中でそれぞれの時間を大切にされている印象です。"
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "犬連れで長時間滞在しても問題ありませんか？",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "はい、問題ありません。周囲への配慮をお願いしていますが、落ち着いて過ごせるわんちゃんであればゆっくりお過ごしいただけます。"
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "ペットのサイズや犬種に制限はありますか？",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "基本的にサイズや犬種の制限は設けていません。ただし、店内空間の都合上、配慮が必要な場合はスタッフからご相談させていただくことがあります。不安な方は事前にお電話ください。"
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "ペット同伴で利用する際にマナーやルールはありますか？",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "はい、いくつかお願いしています。店内ではリードを付けていただくかキャリー・カートでの管理をお願いしています。ペットも人もどちらも心地よく過ごせる空間づくりのためのルールですので、ご理解いただけるとうれしいです。"
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "店内で犬を抱っこしても大丈夫ですか？",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "はい、抱っこしていただいて大丈夫です。カートやキャリーなど、その子に合った方法でお過ごしください。ただし、テーブルの上に乗せることは衛生面の観点からご遠慮いただいています。"
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "ペット同伴の場合、他のお客さまとの距離は保たれますか？",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "はい、できる限り配慮しています。ペット同伴のお客さまと動物が少し苦手な方のどちらも安心できるよう、席の配置やご案内を工夫しています。"
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "ペットアレルギーのお客さまがいる場合はどうしていますか？",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "お席の間隔を調整したりエリアを分けるなど、状況に応じて対応しています。ご不安な点があれば遠慮なくスタッフにお声がけください。"
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "ペット同伴カフェでも衛生面は大丈夫ですか？",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "はい、ご安心ください。保健所の基準に沿った衛生管理を行い、清掃や消毒も定期的に実施しています。人もペットも快適に過ごせる環境づくりを大切にしています。"
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "ペット用のメニューはありますか？",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "現在、専用のペット用のメニューはご用意していません。衛生管理や保健所基準を考慮した上での判断です。その分、一緒に過ごす時間や写真撮影など、思い出に残る体験を大切にしています。"
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "ペットのおやつを持ち込んでも大丈夫ですか？",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "基本的には可能です。ただし、においの強いものや周囲への配慮が必要なものはご遠慮ください。迷われた場合は、事前にスタッフへご相談ください。"
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "写真映えするペット可カフェを探しています",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Green Beans Coffeeは写真撮影を楽しみに来られる方も多いカフェです。フォトブースやチェキ撮影イベントを行うこともあります。撮影の際は他のお客さまが写り込まないようご配慮をお願いします。"
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "店内で写真撮影はできますか？",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "はい、撮影していただけます。撮り方や場所に迷った場合はスタッフがお手伝いしますので、お気軽にお声がけください。"
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "店内で愛犬が粗相をしてしまった場合はどうすればいいですか？",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "まずは飼い主さまご自身での一次対応をお願いしています。その後、必ずスタッフにお声がけください。最終的な清掃や消毒はスタッフが責任をもって対応しますのでご安心ください。"
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "粗相が心配な場合、事前にできる対策はありますか？",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "はい、マナーパンツやマナーベルトの着用をおすすめしています。初めての場所でも飼い主さまもペットも安心して過ごしていただけます。"
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "他のお客さまに迷惑がかからないか心配です",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "そのお気持ち、とてもよく分かります。もし吠え続けてしまう場合などはスタッフがさりげなくフォローしますので、無理せずお声がけください。"
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "事前に確認しておいた方がいいことはありますか？",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "初めてご利用される方は混雑状況やペット同伴について事前にお電話で確認していただくと安心です。電話番号は03-6447-0681です。"
+        }
+      }
+    ]
+  }
+  </script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": "Green Beans Coffee ペット特化サイト",
+    "url": "https://greenbeanscoffeeambassador.com/pets/",
+    "description": "北参道の都会派ペットフレンドリーカフェ「Green Beans Coffee」をGBCペットアンバサダーが紹介するサブサイト",
+    "author": {
+      "@type": "Person",
+      "name": "Ayaka"
+    },
+    "isPartOf": {
+      "@type": "WebSite",
+      "name": "Green Beans Coffee アンバサダーサイト",
+      "url": "https://greenbeanscoffeeambassador.com/"
+    }
+  }
+  </script>
+
+  <!-- Payment Modal -->
+  <div id="paymentModal" class="hidden fixed inset-0 bg-black/90 z-50 flex items-center justify-center p-4" onclick="closePaymentModal()">
+    <div class="relative bg-background rounded-xl max-w-2xl w-full p-6 md:p-8" onclick="event.stopPropagation()">
+      <!-- Close Button -->
+      <button onclick="closePaymentModal()" class="absolute top-4 right-4 text-primary hover:text-accent transition" aria-label="モーダルを閉じる">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <line x1="18" y1="6" x2="6" y2="18"></line>
+          <line x1="6" y1="6" x2="18" y2="18"></line>
+        </svg>
+      </button>
+
+      <!-- Modal Content -->
+      <h3 class="text-2xl font-bold mb-6 text-primary text-center">お支払い方法</h3>
+
+      <div class="space-y-6 text-text">
+        <!-- 現金 -->
+        <div>
+          <h4 class="font-bold text-primary mb-2">💴 現金</h4>
+          <p class="text-sm">現金でのお支払いが可能です。</p>
+        </div>
+
+        <!-- クレジットカード -->
+        <div>
+          <h4 class="font-bold text-primary mb-2">💳 クレジットカード</h4>
+          <p class="text-sm">VISA、Master、JCB、AMEX、Diners、UnionPay</p>
+        </div>
+
+        <!-- 電子マネー -->
+        <div>
+          <h4 class="font-bold text-primary mb-2">📱 電子マネー</h4>
+          <p class="text-sm">交通系電子マネー（Suicaなど）、楽天Edy、WAON、iD、QUICPay</p>
+        </div>
+
+        <!-- QRコード決済 -->
+        <div>
+          <h4 class="font-bold text-primary mb-2">📲 QRコード決済</h4>
+          <p class="text-sm">PayPay、d払い、楽天ペイ、au PAY、Alipay、WeChat Pay</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    // Payment Modal Functions
+    function openPaymentModal() {
+      document.getElementById('paymentModal').classList.remove('hidden');
+    }
+
+    function closePaymentModal() {
+      document.getElementById('paymentModal').classList.add('hidden');
+    }
+
+    // Escape key to close payment modal
+    document.addEventListener('keydown', (e) => {
+      const paymentModal = document.getElementById('paymentModal');
+      if (!paymentModal.classList.contains('hidden')) {
+        if (e.key === 'Escape') closePaymentModal();
+      }
+    });
+  </script>
+
+  <!-- Video Modal -->
+  <div id="videoModal" class="hidden fixed inset-0 bg-black/95 z-50 flex items-center justify-center" onclick="closeVideoModal()">
+    <div class="relative w-full h-full flex items-center justify-center" onclick="event.stopPropagation()">
+      <!-- Close Button -->
+      <button onclick="closeVideoModal()" class="absolute top-4 right-4 text-white hover:text-accent transition z-10 bg-black/50 rounded-full w-10 h-10 md:w-12 md:h-12 flex items-center justify-center" aria-label="動画を閉じる">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <line x1="18" y1="6" x2="6" y2="18"></line>
+          <line x1="6" y1="6" x2="18" y2="18"></line>
+        </svg>
+      </button>
+      <!-- Video Container: 縦長動画(9:16)対応 -->
+      <div class="relative w-full h-full max-w-[90vw] max-h-[90vh] md:max-w-[500px] md:max-h-[888px] mx-auto">
+        <iframe id="videoFrame" class="w-full h-full rounded-lg" src="index.html" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+      </div>
+    </div>
+  </div>
+
+  <!-- Gallery Modal -->
+  <div id="galleryModal" class="hidden fixed inset-0 bg-black/90 z-50 flex items-center justify-center p-4">
+    <div class="relative max-w-3xl w-full">
+      <!-- Close Button -->
+      <button onclick="closeGallery()" class="absolute -top-12 right-0 z-10 text-white hover:text-accent transition">
+        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <line x1="18" y1="6" x2="6" y2="18"></line>
+          <line x1="6" y1="6" x2="18" y2="18"></line>
+        </svg>
+      </button>
+
+      <!-- Image Container -->
+      <div class="relative flex items-center justify-center" style="max-height: 80vh;">
+        <img id="galleryImage" src="index.html" alt="ポン誕生祭の写真" class="max-w-full max-h-[80vh] w-auto h-auto object-contain rounded-lg shadow-2xl">
+
+        <!-- Navigation Buttons -->
+        <button onclick="prevImage()" class="absolute left-4 top-1/2 -translate-y-1/2 bg-white/80 hover:bg-white text-primary rounded-full p-3 transition shadow-lg">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <polyline points="15 18 9 12 15 6"></polyline>
+          </svg>
+        </button>
+        <button onclick="nextImage()" class="absolute right-4 top-1/2 -translate-y-1/2 bg-white/80 hover:bg-white text-primary rounded-full p-3 transition shadow-lg">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <polyline points="9 18 15 12 9 6"></polyline>
+          </svg>
+        </button>
+
+        <!-- Image Counter -->
+        <div class="absolute bottom-4 left-1/2 -translate-x-1/2 bg-black/70 text-white px-4 py-2 rounded-full text-sm">
+          <span id="imageCounter">1 / 3</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    // インライン再生 汎用関数
+    function playInlineVideo(thumbId, iframeId, videoId) {
+      document.getElementById(thumbId).style.display = 'none';
+      const iframe = document.getElementById(iframeId);
+      iframe.src = `https://www.youtube.com/embed/${videoId}?autoplay=1&enablejsapi=1&rel=0`;
+      iframe.style.display = 'block';
+    }
+
+    // チェキブース: インライン再生
+    function playChekiInline() {
+      playInlineVideo('chekiThumb', 'chekiIframe', 'XnktMIUsN4Q');
+    }
+
+    // Video Modal Functions
+    function openVideoModal(videoId, title) {
+      const modal = document.getElementById('videoModal');
+      const iframe = document.getElementById('videoFrame');
+      iframe.src = `https://www.youtube.com/embed/${videoId}?autoplay=1&enablejsapi=1`;
+      iframe.title = title;
+      modal.classList.remove('hidden');
+      document.body.style.overflow = 'hidden';
+    }
+
+    function closeVideoModal() {
+      const modal = document.getElementById('videoModal');
+      const iframe = document.getElementById('videoFrame');
+      iframe.src = '';
+      modal.classList.add('hidden');
+      document.body.style.overflow = '';
+    }
+
+    // 動画終了検知: インライン or モーダルを判別してリセット
+    const inlinePlayers = [
+      { iframe: 'chekiIframe',   thumb: 'chekiThumb'   },
+      { iframe: 'accessIframe1', thumb: 'accessThumb1' },
+      { iframe: 'accessIframe2', thumb: 'accessThumb2' },
+    ];
+    window.addEventListener('message', function(event) {
+      if (event.origin !== 'https://www.youtube.com') return;
+      try {
+        const data = JSON.parse(event.data);
+        if (data.event === 'onStateChange' && data.info === 0) {
+          for (const p of inlinePlayers) {
+            const iframe = document.getElementById(p.iframe);
+            if (iframe && iframe.style.display !== 'none') {
+              iframe.src = '';
+              iframe.style.display = 'none';
+              document.getElementById(p.thumb).style.display = '';
+              return;
+            }
+          }
+          const modal = document.getElementById('videoModal');
+          if (modal && !modal.classList.contains('hidden')) {
+            closeVideoModal();
+          }
+        }
+      } catch(e) {}
+    });
+
+    // Gallery Modal Functions
+    const galleryImages = [
+      'assets/images/visit-diary/visit-pon-4.jpg',
+      'assets/images/visit-diary/visit-pon-5.jpg',
+      'assets/images/visit-diary/visit-pon-6.jpg'
+    ];
+    let currentImageIndex = 0;
+
+    function openGallery() {
+      currentImageIndex = 0;
+      updateGalleryImage();
+      document.getElementById('galleryModal').classList.remove('hidden');
+      document.body.style.overflow = 'hidden';
+    }
+
+    function closeGallery() {
+      document.getElementById('galleryModal').classList.add('hidden');
+      document.body.style.overflow = 'auto';
+    }
+
+    function updateGalleryImage() {
+      document.getElementById('galleryImage').src = galleryImages[currentImageIndex];
+      document.getElementById('imageCounter').textContent = `${currentImageIndex + 1} / ${galleryImages.length}`;
+    }
+
+    function nextImage() {
+      currentImageIndex = (currentImageIndex + 1) % galleryImages.length;
+      updateGalleryImage();
+    }
+
+    function prevImage() {
+      currentImageIndex = (currentImageIndex - 1 + galleryImages.length) % galleryImages.length;
+      updateGalleryImage();
+    }
+
+    // Open gallery button
+    document.getElementById('openGalleryBtn').addEventListener('click', openGallery);
+
+    // Close on background click
+    document.getElementById('galleryModal').addEventListener('click', (e) => {
+      if (e.target.id === 'galleryModal') {
+        closeGallery();
+      }
+    });
+
+    // Keyboard navigation
+    document.addEventListener('keydown', (e) => {
+      const galleryModal = document.getElementById('galleryModal');
+      if (!galleryModal.classList.contains('hidden')) {
+        if (e.key === 'Escape') closeGallery();
+        if (e.key === 'ArrowRight') nextImage();
+        if (e.key === 'ArrowLeft') prevImage();
+      }
+    });
+  </script>
+<!-- Cloudflare Pages Analytics --><script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "79549c8fb1fb40ed9c5365da8205797d"}'></script><!-- Cloudflare Pages Analytics --></body>
+</html>
