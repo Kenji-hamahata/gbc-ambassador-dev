@@ -1,20 +1,66 @@
 <!DOCTYPE html>
 <html lang="ja">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>記事一覧 | Green Beans Coffee アンバサダーサイト</title>
-    <meta name="description" content="Green Beans Coffee アンバサダーによる記事一覧。ダガヤサンドウ、北参道、コーヒー、ペットフレンドリーカフェの情報をお届けします。">
-    <style>
-        body { font-family: 'Helvetica Neue', Arial, 'Hiragino Sans', sans-serif; max-width: 800px; margin: 0 auto; padding: 20px; color: #333; }
-        h1 { text-align: center; margin-bottom: 40px; }
-        p.coming-soon { text-align: center; color: #888; font-size: 1.1em; margin-top: 60px; }
-        a.back { display: block; text-align: center; margin-top: 40px; color: #6b8e23; }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>記事一覧 | Green Beans Coffee アンバサダーサイト</title>
+  <meta name="description" content="Green Beans Coffee アンバサダーによる記事一覧。ダガヤサンドウ、北参道、コーヒー、ペットフレンドリーカフェの情報をお届けします。">
+  <link rel="icon" type="image/png" href="/favicon.png">
+  <script src="https://cdn.tailwindcss.com?plugins=forms,typography"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700&family=Noto+Serif+JP:wght@400;600&display=swap" rel="stylesheet">
+  <script>
+    tailwind.config = {
+      theme: { extend: { colors: {
+        primary: '#4A3728', secondary: '#8B7355', accent: '#C9A86C', background: '#FAF8F5', text: '#2D2A26'
+      }}}
+    }
+  </script>
+  <style>
+    body { font-family: 'Noto Sans JP', sans-serif; }
+    h1, h2 { font-family: 'Noto Serif JP', serif; }
+  </style>
 </head>
-<body>
-    <h1>GBC Magazine - 記事一覧</h1>
-    <p class="coming-soon">記事は近日公開予定です。</p>
-    <a class="back" href="/">← トップページに戻る</a>
+<body class="bg-background text-text">
+  <header class="bg-primary text-white shadow-md">
+    <div class="max-w-4xl mx-auto px-4 py-4 flex items-center justify-between">
+      <a href="/" class="text-xl font-bold tracking-wide hover:opacity-80 transition" style="font-family: 'Noto Serif JP', serif;">Green Beans Coffee</a>
+      <nav class="flex gap-6 text-sm">
+        <a href="/" class="hover:text-accent transition">ホーム</a>
+        <a href="/articles/" class="text-accent">記事一覧</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="max-w-4xl mx-auto px-4 py-8">
+    <h1 class="text-2xl md:text-3xl font-bold text-primary mb-8">GBC Magazine - 記事一覧</h1>
+    <div class="grid md:grid-cols-2 gap-6">
+      
+      <a href="/articles/kitasando-hidden-coffee-roastery/" 
+         class="block bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition"
+         data-slug="kitasando-hidden-coffee-roastery" data-title="北参道の隠れ家自家焙煎コーヒー専門店｜看板なしの知る人ぞ知るカフェ" data-category="ダガヤサンドウ" data-date="2026-04-07">
+        <img src="/articles/kitasando-hidden-coffee-roastery/og-image.png" alt="北参道の隠れ家自家焙煎コーヒー専門店｜看板なしの知る人ぞ知るカフェ" 
+             class="w-full h-48 object-cover" width="1200" height="630" loading="lazy">
+        <div class="p-4">
+          <span class="inline-block bg-accent text-white text-xs font-bold px-2 py-1 rounded-full mb-2">ダガヤサンドウ</span>
+          <h2 class="text-lg font-bold text-primary mb-1">北参道の隠れ家自家焙煎コーヒー専門店｜看板なしの知る人ぞ知るカフェ</h2>
+          <time class="text-sm text-secondary">2026-04-07</time>
+        </div>
+      </a>
+    </div>
+    
+    <div class="text-center mt-12">
+      <a href="/" class="inline-block border-2 border-primary text-primary px-8 py-3 rounded-full hover:bg-primary hover:text-white transition">トップページに戻る</a>
+    </div>
+  </main>
+
+  <footer class="bg-primary text-white py-8 mt-8">
+    <div class="max-w-4xl mx-auto px-4 text-center">
+      <p class="text-accent font-bold mb-2" style="font-family: 'Noto Serif JP', serif;">Green Beans Coffee</p>
+      <p class="text-sm opacity-70">東京都渋谷区千駄ヶ谷 | 北参道駅 徒歩3分</p>
+      <p class="text-xs opacity-50 mt-4">&copy; 2026 Green Beans Coffee Ambassador Site</p>
+    </div>
+  </footer>
 </body>
 </html>
